@@ -31,7 +31,7 @@ int main()
     {
         std::cout << it->first << ": " << it->second << std::endl;
     }
-    // Another option to print all menbers of map
+    // Another option to print all members of map
     for (std::map<std::string, int>::iterator it = ages.begin(); it != ages.end(); it++)
     {
         std::pair<std::string, int> age = *it;
