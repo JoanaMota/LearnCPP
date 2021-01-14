@@ -47,6 +47,9 @@ Like Matrixes.
 Sets are a type of associative containers in which each element has to be unique, because the value of the element identifies it. The value of the element cannot be modified once it is added to the set, though it is possible to remove and add the modified value of that element. 
 It does not create duplicates.
 
+> An operator overload for `<` (`operator<`) is needed when using a loop this because the iterator is compared 
+using the < sign but it does not know what to do
+
 Expected Output:
 ```
 5
