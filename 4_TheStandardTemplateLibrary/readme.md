@@ -64,7 +64,7 @@ Number Found
 50: Sara
 ```
 ---
-## Stacks and Queues `std::stack` `std::queue`
+## Stacks `std::stack` and Queues `std::queue`
 
 **Stack - LIFO** (Last In First Out)
 
@@ -79,8 +79,6 @@ Number Found
 For both:
 
 `push` and `pop` to add and remove elements respectively (destroys the element).
-
-
 
 Expected Output:
 ```
@@ -163,3 +161,54 @@ Object John destroyed
 ```
 
 [Shallow vs. deep copying](https://www.learncpp.com/cpp-tutorial/shallow-vs-deep-copying/)
+
+---
+## Sorting Vectors `std::sort`, Deque `std::deque` and Friends `friend`
+
+`std::sort`
+
+- Sort vector from one element to another.
+- If the vector contains objects it is necessary to create a sort algorithm which can be:
+    - operator < overload on the objects class
+    - compare functions which can be passed to sort ad a function pointer
+- It is very costly in terms of computation (consider using `std::set` instead)
+
+`friend`
+
+- Friends are allowed to access private members;
+- When a function with this prototype is found it will be made a friend to the class
+
+`std::deque`
+
+- Similar to `std::vector`
+- You can add/remove elements to the begin `push_front`/`pop_front` and to the end `push_back`/`pop_back` compared to `std::vector` where you can only add to the end `push_back`.
+
+Expected Output:
+```
+----Sort with operator < overload----
+ Vector Unsorted 
+5 : Mike
+10 : Sue
+7 : Raj
+3 : Vicky
+4 : Raj
+ Vector Sorted 
+5 : Mike
+4 : Raj
+7 : Raj
+10 : Sue
+3 : Vicky
+----Sort with function pointer with compare algorithm----
+ Vector Unsorted 
+5 : Mike
+10 : Sue
+7 : Raj
+3 : Vicky
+4 : Raj
+ Vector Sorted 
+5 : Mike
+7 : Raj
+4 : Raj
+10 : Sue
+3 : Vicky
+```
