@@ -63,7 +63,7 @@ Number Found
 20: Miguel
 50: Sara
 ```
-
+---
 ## Stacks and Queues `std::stack` `std::queue`
 
 **Stack - LIFO** (Last In First Out)
