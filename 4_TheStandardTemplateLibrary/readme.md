@@ -63,3 +63,103 @@ Number Found
 20: Miguel
 50: Sara
 ```
+
+## Stacks and Queues `std::stack` `std::queue`
+
+**Stack - LIFO** (Last In First Out)
+
+`top` to access the top element(the last one in)
+
+**Queue - FIFO** (First In First Out)
+
+`front` to access the first element(first in)
+
+`back` to access the last element(last in) 
+
+For both:
+
+`push` and `pop` to add and remove elements respectively (destroys the element).
+
+
+
+Expected Output:
+```
+------STACK------
+Object Mike created
+Object Mike destroyed
+Object Joana created
+Object Joana destroyed
+Object Joao created
+Object Joao destroyed
+Object Miguel created
+Object Miguel destroyed
+Object Sara created
+Object Sara destroyed
+Object John created
+Object John destroyed
+Object Sue created
+Object Sue destroyed
+Stack size: 7
+
+Object Sue destroyed
+Stack size: 6
+John
+Stack size: 6
+
+--Iterate through stack--
+John
+Object John destroyed
+Sara
+Object Sara destroyed
+Miguel
+Object Miguel destroyed
+Joao
+Object Joao destroyed
+Joana
+Object Joana destroyed
+Mike
+Object Mike destroyed
+--END Iterate through stack--
+------QUEUE------
+Object Mike created
+Object Mike destroyed
+Object Joana created
+Object Joana destroyed
+Object Joao created
+Object Joao destroyed
+Object Miguel created
+Object Miguel destroyed
+Object Sara created
+Object Sara destroyed
+Object John created
+Object John destroyed
+Object Sue created
+Object Sue destroyed
+Stack size: 7
+Front element of the queue: Mike
+Back element of the queue: Sue
+
+Object Mike destroyed
+Stack size: 6
+Joana
+Stack size: 6
+
+--Iterate through stack--
+Joana
+Object Joana destroyed
+Joao
+Object Joao destroyed
+Miguel
+Object Miguel destroyed
+Sara
+Object Sara destroyed
+John
+Object John destroyed
+Sue
+Object Sue destroyed
+--END Iterate through stack--
+Object Joana destroyed
+Object John destroyed
+```
+
+[Shallow vs. deep copying](https://www.learncpp.com/cpp-tutorial/shallow-vs-deep-copying/)
