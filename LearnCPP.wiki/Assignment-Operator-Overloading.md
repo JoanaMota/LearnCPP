@@ -2,11 +2,7 @@
 
 ``` cpp
 const CTest &operator=(const CTest &f_other)
-{
-    m_id = f_other.m_id;
-    m_name = f_other.m_name;
-    return *this;
-}
+
 ```
 
 `f_other` : Reference to the other object, it must be const to prevent the method from changing the input arg.
