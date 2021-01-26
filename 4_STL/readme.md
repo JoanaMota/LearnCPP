@@ -1,4 +1,4 @@
-# The Standard Template Library
+# The Standard Template Library (STL)
 ## Vectors and Memory `std::vector`
 [Vector in C++ STL](https://www.geeksforgeeks.org/vector-in-cpp-stl/)
 
