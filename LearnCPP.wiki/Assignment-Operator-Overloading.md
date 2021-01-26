@@ -38,7 +38,7 @@ CTest(const CTest &f_other)
 }
 ```
 
-> :warning: Bare in mind that if one of the following is required make sure to implement the 2 others:
+> :warning: :warning: Bare in mind that if one of the following is required make sure to implement the 2 others:
 > - Assignment operator overloading
 > - Copy Constructor
 > - Destructor
