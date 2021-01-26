@@ -14,6 +14,8 @@ const CTest &operator=(const CTest &f_other)
 
 `return` : Reference to the object that is being called on.
 
+Different ways for copying objects:
+
 `test2 = test1` - Calls the assignment operator overload
 
 `test3.operator=(test2)` - Calls the assignment operator overload
