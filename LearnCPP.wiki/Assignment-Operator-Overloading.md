@@ -1,4 +1,5 @@
 # Overloading the Assignment Operator `=`
+[Checkout the code](https://github.com/JoanaMota/LearnCPP/blob/main/5_OperatorOverloading/1_overloading_assignment_operator.cpp)
 
 ``` cpp
 const CTest &operator=(const CTest &f_other)
@@ -43,7 +44,7 @@ CTest(const CTest &f_other)
 > - Copy Constructor
 > - Destructor
 
-**Expected Output**
+**Exercise Expected Output**
 ```
 Printing test1  10 : Mike
 Parameterized Constructor
