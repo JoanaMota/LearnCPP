@@ -6,4 +6,4 @@
 
 [home]: https://github.com/JoanaMota/LearnCPP/wiki
 [STL]: https://github.com/JoanaMota/LearnCPP/wiki/The-Standard-Template-Library-(STL)
-[OperatorOveroading]: https://github.com/JoanaMota/LearnCPP/wiki/Operator-Overloading
+[OperatorOveroading]: https://github.com/JoanaMota/LearnCPP/wiki/Assignment-Operator-Overloading

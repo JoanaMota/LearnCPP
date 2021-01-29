@@ -166,10 +166,14 @@ Object John destroyed
 
 `std::sort`
 
-- Sort vector from one element to another.
+`std::sort (element start, elment end)`
+
+`std::sort (element start, elment end, function pointer algorithm)`
+
+- Sort vector from one specified element to another.
 - If the vector contains objects it is necessary to create a sort algorithm which can be:
     - operator < overload on the objects class
-    - compare functions which can be passed to sort ad a function pointer
+    - compare functions which can be passed to sort as a function pointer
 - It is very costly in terms of computation (consider using `std::set` instead)
 
 `friend`
