@@ -17,6 +17,8 @@ public:
     CComplex(const CComplex &f_other);
     ///@brief Assignment Operator
     const CComplex &operator=(const CComplex &f_other);
+    bool operator==(const CComplex &other) const;
+    bool operator!=(const CComplex &other) const;
     ~CComplex();
 
     double getReal() const { return m_real; }
@@ -52,6 +54,15 @@ CComplex::~CComplex()
 {
 }
 
+bool CComplex::operator==(const CComplex &other) const
+{
+    return (m_real == other.m_real) && (m_imaginary == other.m_imaginary);
+}
+bool CComplex::operator!=(const CComplex &other) const
+{
+    return !(*this == other);
+}
+//
 std::ostream &operator<<(std::ostream &out, const CComplex &c)
 {
     out << "(" << c.getReal() << "," << c.getImaginary() << ")";
