@@ -17,7 +17,6 @@ public:
     CComplex(const CComplex &f_other);
     ///@brief Assignment Operator
     const CComplex &operator=(const CComplex &f_other);
-    friend std::ostream &operator<<(std::ostream &out, const CComplex &c);
     ~CComplex();
 
     double getReal() const { return m_real; }
@@ -49,14 +48,25 @@ const CComplex &CComplex::operator=(const CComplex &f_other)
     return *this;
 }
 
+CComplex::~CComplex()
+{
+}
+
 std::ostream &operator<<(std::ostream &out, const CComplex &c)
 {
     out << "(" << c.getReal() << "," << c.getImaginary() << ")";
     return out;
 }
-
-CComplex::~CComplex()
+CComplex operator+(const CComplex &c1, const CComplex &c2)
 {
+    return CComplex(c1.getReal() + c2.getReal(), c1.getImaginary() + c2.getImaginary());
 }
-
+CComplex operator+(const CComplex &c1, double d)
+{
+    return CComplex(c1.getReal() + d, c1.getImaginary());
+}
+CComplex operator+(double d, const CComplex &c1)
+{
+    return CComplex(c1.getReal() + d, c1.getImaginary());
+}
 #endif /* COMPLEX_HPP */
