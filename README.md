@@ -3,7 +3,7 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
 
 > For more detailed information about the subjects checkout my notes on the [Wiki](https://github.com/JoanaMota/LearnCPP/wiki) :wink:
 
-- The Standard Template Library (STL)
+- [The Standard Template Library (STL)](https://github.com/JoanaMota/LearnCPP/wiki/The-Standard-Template-Library-(STL))
     - Vectors and Memory
     - 2D Vectors
     - Lists
@@ -17,9 +17,9 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - STL complex data types
 
 - Operating Overloading
-    - Overloading the assignment operator `=`
-    - Overloading left bit shift 
-    - A complex number class
-    - Overloading plus `+`
+    - [Overloading the assignment operator `=`](https://github.com/JoanaMota/LearnCPP/wiki/Assignment-Operator-Overloading)
+    - [Overloading left bit shift `<<`](https://github.com/JoanaMota/LearnCPP/wiki/Left-Bit-Shift-Overloading)
+    - [A complex number class](https://github.com/JoanaMota/LearnCPP/wiki/Complex-Number-Class)
+    - [Overloading plus operator`+`](https://github.com/JoanaMota/LearnCPP/wiki/Plus-Operator-Overloading)
     - Overloading equality test
     - Overloading the dereference operator `*`
