@@ -3,18 +3,20 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
 
 > For more detailed information about the subjects checkout my notes on the [Wiki](https://github.com/JoanaMota/LearnCPP/wiki) :wink:
 
-- [The Standard Template Library (STL)](https://github.com/JoanaMota/LearnCPP/wiki/The-Standard-Template-Library-(STL))
-    - Vectors and Memory
-    - 2D Vectors
-    - Lists
-    - Maps
+- The Standard Template Library (STL)
+    - [Vectors](https://github.com/JoanaMota/LearnCPP/wiki/Vectors)
+      - Vectors and Memory
+      - 2D Vectors
+    - [Lists](https://github.com/JoanaMota/LearnCPP/wiki/Lists)
+    - [Maps](https://github.com/JoanaMota/LearnCPP/wiki/Maps)
         - Custom objects as Map values
         - Custom objects as Map keys
-    - Multimap
-    - Sets
-    - Stacks and queues
-    - Sorting Vectors, Deque and Friend
-    - STL complex data types
+        - Multimap
+    - [Sets](https://github.com/JoanaMota/LearnCPP/wiki/Sets)
+    - [Stacks and queues](https://github.com/JoanaMota/LearnCPP/wiki/Stacks-Queues)
+    - [Sorting Vectors, Deque and Friend](https://github.com/JoanaMota/LearnCPP/wiki/Sorting-Vectors-Deque-Friend)
+    - [STL complex data types](https://github.com/JoanaMota/LearnCPP/wiki/Complex-Data-Types)
+
 
 - Operating Overloading
     - [Overloading the assignment operator `=`](https://github.com/JoanaMota/LearnCPP/wiki/Assignment-Operator-Overloading)
