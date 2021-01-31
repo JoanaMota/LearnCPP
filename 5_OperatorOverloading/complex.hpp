@@ -19,6 +19,7 @@ public:
     const CComplex &operator=(const CComplex &f_other);
     bool operator==(const CComplex &other) const;
     bool operator!=(const CComplex &other) const;
+    CComplex operator*() const;
     ~CComplex();
 
     double getReal() const { return m_real; }
@@ -48,6 +49,10 @@ const CComplex &CComplex::operator=(const CComplex &f_other)
     m_real = f_other.m_real;
     m_imaginary = f_other.m_imaginary;
     return *this;
+}
+CComplex CComplex::operator*() const
+{
+    return CComplex(m_real, -m_imaginary);
 }
 
 CComplex::~CComplex()
