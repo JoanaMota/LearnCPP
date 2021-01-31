@@ -21,5 +21,5 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Overloading left bit shift `<<`](https://github.com/JoanaMota/LearnCPP/wiki/Left-Bit-Shift-Overloading)
     - [A complex number class](https://github.com/JoanaMota/LearnCPP/wiki/Complex-Number-Class)
     - [Overloading plus operator`+`](https://github.com/JoanaMota/LearnCPP/wiki/Plus-Operator-Overloading)
-    - Overloading equality test
-    - Overloading the dereference operator `*`
+    - [Overloading equality test](https://github.com/JoanaMota/LearnCPP/wiki/Equality-Test-Overloading)
+    - [Overloading the dereference operator `*`](https://github.com/JoanaMota/LearnCPP/wiki/Dereference-Operator-Overloading)
