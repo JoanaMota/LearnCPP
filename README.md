@@ -1,4 +1,4 @@
-# Learn Advance C++
+# Learn Advanced C++
 My implementation of the exercises from the Udemy Course - Learn Advanced C++ Programming
 
 > For more detailed information about the subjects checkout my notes on the [Wiki](https://github.com/JoanaMota/LearnCPP/wiki) :wink:
