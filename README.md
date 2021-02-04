@@ -25,3 +25,6 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Overloading plus operator`+`](https://github.com/JoanaMota/LearnCPP/wiki/Plus-Operator-Overloading)
     - [Overloading equality test](https://github.com/JoanaMota/LearnCPP/wiki/Equality-Test-Overloading)
     - [Overloading the dereference operator `*`](https://github.com/JoanaMota/LearnCPP/wiki/Dereference-Operator-Overloading)
+
+- Templates
+    - [Templates Intro](https://github.com/JoanaMota/LearnCPP/wiki/Templates)
