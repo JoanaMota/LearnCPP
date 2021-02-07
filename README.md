@@ -31,3 +31,4 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Template Functions](https://github.com/JoanaMota/LearnCPP/wiki/Template-Functions)
     - [Template Classes](https://github.com/JoanaMota/LearnCPP/wiki/Template-Classes)
     - [Template Functions and Type Inference](https://github.com/JoanaMota/LearnCPP/wiki/Template-Functions-and-Type-Inference)
+    - [Template Arguments](https://github.com/JoanaMota/LearnCPP/wiki/Template-Arguments)
