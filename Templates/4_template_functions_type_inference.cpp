@@ -18,6 +18,16 @@ void show()
     std::cout << T() << std::endl;
 }
 
+template <class T>
+void func(T x, T y)
+{
+    std::cout << "Template function" << std::endl;
+}
+void func(int x, int y)
+{
+    std::cout << "Non Template function" << std::endl;
+}
+
 int main()
 {
     print<std::string>("Hello");
@@ -28,6 +38,12 @@ int main()
 
     // show(); // We cannot do this because the compiler cannot infer the type becuse the type is not in the argument list
     show<double>();
+
+    func(1, 2);
+    func<>(1, 2);
+    func("a", "b");
+    func(1, 'b'); // Calls non-template Function because the non-template function resolves this function
+                  // call after using the standard convertion from character to integer
 
     return 0;
 }
