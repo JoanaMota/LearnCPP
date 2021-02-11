@@ -32,5 +32,5 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Template Classes](https://github.com/JoanaMota/LearnCPP/wiki/Template-Classes)
     - [Template Functions and Type Inference](https://github.com/JoanaMota/LearnCPP/wiki/Template-Functions-and-Type-Inference)
     - [Template Arguments](https://github.com/JoanaMota/LearnCPP/wiki/Template-Arguments)
-    - [Template Specialization][https://github.com/JoanaMota/LearnCPP/wiki/Template-Specialization]
-    - [Template Partial and Explicit Specialization][https://github.com/JoanaMota/LearnCPP/wiki/Template-Partial-And-Explicit-Specialization]
+    - [Template Specialization](https://github.com/JoanaMota/LearnCPP/wiki/Template-Specialization)
+    - [Template Partial and Explicit Specialization](https://github.com/JoanaMota/LearnCPP/wiki/Template-Partial-And-Explicit-Specialization)
