@@ -22,7 +22,7 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Overloading the assignment operator `=`](https://github.com/JoanaMota/LearnCPP/wiki/Assignment-Operator-Overloading)
     - [Overloading left bit shift `<<`](https://github.com/JoanaMota/LearnCPP/wiki/Left-Bit-Shift-Overloading)
     - [A complex number class](https://github.com/JoanaMota/LearnCPP/wiki/Complex-Number-Class)
-    - [Overloading plus operator`+`](https://github.com/JoanaMota/LearnCPP/wiki/Plus-Operator-Overloading)
+    - [Overloading plus operator `+`](https://github.com/JoanaMota/LearnCPP/wiki/Plus-Operator-Overloading)
     - [Overloading equality test](https://github.com/JoanaMota/LearnCPP/wiki/Equality-Test-Overloading)
     - [Overloading the dereference operator `*`](https://github.com/JoanaMota/LearnCPP/wiki/Dereference-Operator-Overloading)
 
@@ -32,3 +32,5 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Template Classes](https://github.com/JoanaMota/LearnCPP/wiki/Template-Classes)
     - [Template Functions and Type Inference](https://github.com/JoanaMota/LearnCPP/wiki/Template-Functions-and-Type-Inference)
     - [Template Arguments](https://github.com/JoanaMota/LearnCPP/wiki/Template-Arguments)
+    - [Template Specialization][https://github.com/JoanaMota/LearnCPP/wiki/Template-Specialization]
+    - [Template Partial and Explicit Specialization][https://github.com/JoanaMota/LearnCPP/wiki/Template-Partial-And-Explicit-Specialization]
