@@ -34,3 +34,8 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Template Arguments](https://github.com/JoanaMota/LearnCPP/wiki/Template-Arguments)
     - [Template Specialization](https://github.com/JoanaMota/LearnCPP/wiki/Template-Specialization)
     - [Template Partial and Explicit Specialization](https://github.com/JoanaMota/LearnCPP/wiki/Template-Partial-And-Explicit-Specialization)
+
+- Passing Functions to Functions
+    - [Function Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Function-Pointers)
+    - [Abstract Classes and Pure Virtual Functions](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions)
+    - [Functors](https://github.com/JoanaMota/LearnCPP/wiki/Functors)
