@@ -35,6 +35,11 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Template Specialization](https://github.com/JoanaMota/LearnCPP/wiki/Template-Specialization)
     - [Template Partial and Explicit Specialization](https://github.com/JoanaMota/LearnCPP/wiki/Template-Partial-And-Explicit-Specialization)
 
+- Virtual Functions
+    - [Virtual Functions Intro](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions)
+    - [Virtual Destructor, Constructors and Copy Constructors](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Destructore-Constructores-Copy-Constructors)
+    - [Run Time Type Information RTTI](https://github.com/JoanaMota/LearnCPP/wiki/Run-Time-Type-Information-RTTI)
+
 - Passing Functions to Functions
     - [Function Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Function-Pointers)
     - [Abstract Classes and Pure Virtual Functions](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions)
