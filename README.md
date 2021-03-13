@@ -44,3 +44,8 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Function Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Function-Pointers)
     - [Abstract Classes and Pure Virtual Functions](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions)
     - [Functors](https://github.com/JoanaMota/LearnCPP/wiki/Functors)
+
+- [Linked List](https://github.com/JoanaMota/LearnCPP/wiki/Linked-List-Intro)
+    - Singly Linked List
+        - [SLL Insertion and Deletion](https://github.com/JoanaMota/LearnCPP/wiki/Singly-Linked-List-Insertion-Deletion)
+        - [SLL Length, Search, Count and Remove Duplicates](https://github.com/JoanaMota/LearnCPP/wiki/Singly-LL-Length-Search-Count)
