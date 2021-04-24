@@ -71,7 +71,7 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
   - [Initialization C++98 vs C++11](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#initialization)
   - [Initializer Lists](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#initializer-lists)
   - [Object Initialization, Default and Delete](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#object-initialization-default-and-delete)
-    - [Delegating Constructors](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#delegating-constructors)
+  - [Delegating Constructors](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#delegating-constructors)
   - [Lambda Expressions](https://github.com/JoanaMota/LearnCPP/wiki/Lambda-Expressions)
   - [The Standard Function Type](https://github.com/JoanaMota/LearnCPP/wiki/Standard-Function-Type)
   - [Return Value Optimization](https://github.com/JoanaMota/LearnCPP/wiki/Return-Value-Optimization)
