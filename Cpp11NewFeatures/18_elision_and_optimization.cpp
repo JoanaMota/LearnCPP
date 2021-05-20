@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 class CTest
 {
@@ -47,5 +48,7 @@ int main()
 {
     CTest test1 = getTest();
     std::cout << test1 << std::endl;
+    std::vector<CTest> vec;
+    vec.push_back(CTest()); // Calls the copy constructor
     return 0;
 }

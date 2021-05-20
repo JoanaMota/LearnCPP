@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory.h>
+#include <vector>
 
 class CTest
 {
@@ -16,22 +17,20 @@ public:
         // other way to initialize m_pBuffer:
         // memset(m_pBuffer, 0, sizeof(int) * SIZE);
     }
-    ///@brief Parameterized Constructor
-    CTest(int f_i)
-    {
-        std::cout << "Parameterized Constructor" << std::endl;
-        m_pBuffer = new int[SIZE]{}; // initialize all to zero
-        for (int i = 0; i < SIZE; i++)
-        {
-            m_pBuffer[i] = 7 * i;
-        }
-    }
     ///@brief Copy Constructor
     CTest(const CTest &f_other)
     {
         std::cout << "Copy Constructor" << std::endl;
         m_pBuffer = new int[SIZE]{}; // initialize all to zero
         memcpy(m_pBuffer, f_other.m_pBuffer, SIZE * sizeof(int));
+    }
+    ///@brief Move Constructor
+    CTest(CTest &&f_other)
+    {
+        std::cout << "Move Constructor" << std::endl;
+        m_pBuffer = f_other.m_pBuffer;
+        // We need to pass it to null pointer since it is going to be deleted on the Destructor
+        f_other.m_pBuffer = nullptr;
     }
     ///@brief Assignment operator overload
     const CTest &operator=(const CTest &f_other)
@@ -40,28 +39,33 @@ public:
         memcpy(m_pBuffer, f_other.m_pBuffer, SIZE * sizeof(int));
         return *this;
     }
+    ///@brief Move Assignment operator overload
+    const CTest &operator=(CTest &&f_other)
+    {
+        std::cout << "Executing Move Assignment" << std::endl;
+        delete[] m_pBuffer;
+        m_pBuffer = f_other.m_pBuffer;
+        f_other.m_pBuffer = nullptr;
+        return *this;
+    }
     ~CTest()
     {
         std::cout << "Destructor" << std::endl;
+        if (m_pBuffer == nullptr)
+            return;
+
         delete[] m_pBuffer;
     }
-    friend std::ostream &operator<<(std::ostream &f_out, const CTest &f_test);
 };
-
-std::ostream &operator<<(std::ostream &f_out, const CTest &f_test)
-{
-    f_out << "Hello from Test"; // we dont put endl to enable the user to add it afterwards
-    return f_out;
-}
-
-CTest getTest()
-{
-    return CTest();
-}
 
 int main()
 {
-    CTest test1 = getTest();
-    std::cout << test1 << std::endl;
+    std::vector<CTest> vec;
+    std::cout << "--Push back" << std::endl;
+    vec.push_back(CTest()); // Now it calles the Move Constructor instead of the Copy Constructor
+
+    std::cout << "---" << std::endl;
+    CTest test;
+    test = CTest();
     return 0;
 }

@@ -5,7 +5,7 @@ class CTest
 {
 private:
     static const int SIZE = 100;
-    int *m_pBuffer;
+    int *m_pBuffer{nullptr};
 
 public:
     ///@brief Default Constructor
@@ -23,7 +23,7 @@ public:
         m_pBuffer = new int[SIZE]{}; // initialize all to zero
         for (int i = 0; i < SIZE; i++)
         {
-            m_pBuffer[i] = 7 * i;
+            m_pBuffer[i] = f_i * i;
         }
     }
     ///@brief Copy Constructor
