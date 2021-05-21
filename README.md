@@ -85,3 +85,7 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - [Reinterpret Cast](https://github.com/JoanaMota/LearnCPP/wiki/Casting#reinterpret-cast)
   - [Perfect Forwarding](https://github.com/JoanaMota/LearnCPP/wiki/Perfect-Forwarding)
   - [Bind](https://github.com/JoanaMota/LearnCPP/wiki/Bind)
+  - Pointers
+    - [Normal Pointer](https://github.com/JoanaMota/LearnCPP/wiki/Pointers)
+    - [Unique Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Pointers#unique-pointers)
+    - [Shared Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Pointers#shared-pointers)
