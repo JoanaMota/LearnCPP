@@ -55,6 +55,7 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
   - Singly Linked List
     - [SLL Insertion and Deletion](https://github.com/JoanaMota/LearnCPP/wiki/Singly-Linked-List-Insertion-Deletion)
     - [SLL Length, Search, Count and Remove Duplicates](https://github.com/JoanaMota/LearnCPP/wiki/Singly-LL-Length-Search-Count)
+    - [SLL Reverse and Segregate](https://github.com/JoanaMota/LearnCPP/wiki/Singly-LL-Reversing-Segregate)
   - Doubly Linked List
     - [DLL Insertion and Deletion](https://github.com/JoanaMota/LearnCPP/wiki/Doubly-Linked-List-Insertion-Deletion)
     - [DLL Length, Reverse and Remove Duplicates](https://github.com/JoanaMota/LearnCPP/wiki/DLL-Remove-Duplicates-Length-Reverse)
