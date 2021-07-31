@@ -1,10 +1,132 @@
 # Learn Advanced C++
 
-My implementation of the exercises from the Udemy Course - Learn Advanced C++ Programming
+My journey to increase my knowledge in C++.
+
+Let's start with the basics:
+
+**Class:** generally specifies the structure of a data type, which holds its own data members and member functions, that can be accessed and used by creating an instance of that class.
+
+**Object:** is an instance of a class which can have states and behaviors. The working entity of a class. When a class is defined, no memory is allocated but when it is instantiated memory is allocated.
+
+**Method:** can modify the class state.
+
+**`this` pointer:** is a constant pointer that holds the memory address of the current object. They are not available in static member functions since static member functions can be called without any object.
+
+**The 4 pillars of OOP:**
+
+- Abstraction: used for hiding the internal implementations and display only the required details to the user.
+- Encapsulation: it's a mechanism that binds the data and operations together, thus hiding the details from the user. Encapsulation can be achieved with the help of access specifiers that are public, private and protected in C++. With the help of them, we can provide or prevent access directly to a user.
+- Inheritance: it's the possibility of creating a new child class from existing classes, and thus inheriting the properties of the parent class. The parent class is then referred as the Base Class and the child the Derived Class. Normally used for code reusability.
+- Polymorphism: it enables a child class to have the same functionality as its parent class and at the same time have its onw methods and behaviours. However a parent class cannot have the functions of a child class.
+
+**Access Specifiers:**
+
+- public: members and methods can be accessed outside of the class
+- private: members and methods can only be accessed inside its class
+- protected: members and methods can be accessed inside its class and also derived classes
+
+**Types of Inheritance:**
+
+- Single: one base class and one derived class.
+- Multiple: a derived class inherits from two or more classes.
+- Multilevel: the derived class is the base class for another class.
+- Hierarchical: multiple derived classes inherit the properties of the same base class.
+- Hybrid: It's Virtual Inheritance. It is a combination of Multilevel and Hierarchical inheritance.
+
+**[Abstract Class](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions) VS Interface**
+
+|               |                               Abstract Class                                |                      Interface                       |
+| :-----------: | :-------------------------------------------------------------------------: | :--------------------------------------------------: |
+| Instantiation |            Cannot be instantiated, only the derived classes can             | It is absolutely abstract and cannot be instantiated |
+|    Methods    | Must have at least one pure virtual method and can have implemented methods |   Has all methods declared as pure virtual methods   |
+|   Variables   |                       Can have variables declaration                        |             Has no variable declaration              |
+|    Members    |                    Can be public, private and protected                     |                  Have to be public                   |
+|     Speed     |                                    Fast                                     |                Is comparatively slow                 |
+
+**Virtual method** is used with inheritance and is a method which can be redefined in the derived class.The usage of the virtual keyword tells the compiler to perform dynamic linkage or late binding on the method. Virtual functions are resolved at runtime.
+
+**Pure virtual method** is a virtual method which does not need to be defined but only declared. It is declared by assigning 0 to a virtual method.
+
+**Constructor:**
+Its the subroutine called to create an object which also prepares the object to be used. It has the same name as the class.
+
+[Types of constructors](https://github.com/JoanaMota/LearnCPP/blob/main/Cpp11NewFeatures/19_constructors_and_memory.cpp):
+
+- Default Constructor;
+- Parameterized Constructor;
+- Copy Constructor -> initializes an object using another object of the same class;
+- Assignment operator overload.
+
+**Destructor:**
+The subroutine called to destruct an object.
+
+**C VS C++**
+
+|                            C                            |                                                   C++                                                    |
+| :-----------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
+|             procedural programming language             |                         supports both procedural and Object Oriented programming                         |
+|                                                         | supports features like function overloading, templates, inheritance, virtual functions, friend functions |
+|                no methods in structures                 |                                      can have methods in structures                                      |
+|                      no references                      |                                           supports references                                            |
+|     `scanf()` and `printf()` used for input/output      |                     uses streams to perform input `cin` and output `cout` operations                     |
+| exception handling is done in traditional if-else style |                              supports exception handling at language level                               |
+
+**Difference between `class` and `struct`:**
+Class and struct are basically the same, the only difference is that the visibility of the members by default in a structure is public and private in a class.
+
+Since they are basically the same how can we choose to use one or the other?
+
+A `strcut` is more a bundle, it contains several related elements that need to be tied up together in a certain context. A `class` is more like a doer which has responsibilities.
+
+Contrary to a `strcut`, a `class` is made to offer an interface, that has some degree of separation from its implementation. A `class` is not just there to store data. In fact a user of a class is not supposed to know what data the class is storing, or if it contains any data at all for that matter. All he cares about is its responsibilities, expressed via its interface.
+
+**Differences between references and pointers:**
+
+1. Once a reference is created, it cannot be later made to reference another object; it cannot be reseated. This is often done with pointers.
+2. References cannot be NULL. Pointers are often made NULL to indicate that they are not pointing to any valid thing.
+3. A reference must be initialized when declared. There is no such restriction with pointers.
+4. References are safer and easier to use.
+
+**VTABLE and VPTR:**
+
+**vtable** is a table of function pointers maintained per class.
+
+**vpt**r is a pointer to vtable and is maintained per object.
+
+For every constructor the compiler sets the vptr of the object being created which will point to the vtable of the class.
+
+[What is Late Binding or Dynamic Linkage](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#what-is-late-binding-or-dynamic-linkage)
+
+[Inline Functions](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions)
+
+**Friend Class:** a class which can access private and protected members of other class in which it is declared as friend. Friendship is not mutual. Friendship is not inherited
+
+**`malloc()` VS `new`**
+
+- `new` is an operator, `malloc()` is a function.
+- `new` returns exact data type, while `malloc()` returns void pointer.
+- `new` calls constructors, while `malloc()` does not.
+
+```cpp
+int *n = new int(10); // initialization with new()
+str = (char *) malloc(15); //malloc()
+```
+
+**`delete` VS `free()`:**
+
+`free()` is used on resources allocated by `malloc()`, or `calloc()` in C.
+
+`delete` is used on resources allocated by new.
+
+**Dynamic Polymorphism VS...**
+
+---
+
+To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Programming and here are some of the exercises implementations.
 
 > For more detailed information about the subjects checkout my notes on the [Wiki](https://github.com/JoanaMota/LearnCPP/wiki) :wink:
 
-- The Standard Template Library (STL)
+- The Standard Template Library (STL) Data Structures
 
   - [Vectors](https://github.com/JoanaMota/LearnCPP/wiki/Vectors)
     - Vectors and Memory
@@ -15,7 +137,7 @@ My implementation of the exercises from the Udemy Course - Learn Advanced C++ Pr
     - Custom objects as Map keys
     - Multimap
   - [Sets](https://github.com/JoanaMota/LearnCPP/wiki/Sets)
-  - [Stacks and queues](https://github.com/JoanaMota/LearnCPP/wiki/Stacks-Queues)
+  - [Stacks and Queues](https://github.com/JoanaMota/LearnCPP/wiki/Stacks-Queues)
   - [Sorting Vectors, Deque and Friend](https://github.com/JoanaMota/LearnCPP/wiki/Sorting-Vectors-Deque-Friend)
   - [STL complex data types](https://github.com/JoanaMota/LearnCPP/wiki/Complex-Data-Types)
 

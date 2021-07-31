@@ -49,7 +49,7 @@ int main()
     test1.print(); // Reference refers to destroyed object
     */
 
-    testStack.pop(); // Destroyes Sue object
+    testStack.pop(); // Destroys Sue object
     std::cout << "Stack size: " << testStack.size() << std::endl;
     CTest test1 = testStack.top(); // Use a shallow copy to copy John obj to test
                                    // This will be destroyed at the end of the program
@@ -71,7 +71,7 @@ int main()
     std::queue<CTest> testQueue;
 
     testQueue.push(CTest("Mike")); // This Mike local copy is created and destroyed here
-                                   // and copied to the stack with (shallow copy, the default copy Constructor)
+                                   // and copied to the queue with (shallow copy, the default copy Constructor)
     testQueue.push(CTest("Joana"));
     testQueue.push(CTest("Joao"));
     testQueue.push(CTest("Miguel"));
