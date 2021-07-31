@@ -58,7 +58,7 @@ Its the subroutine called to create an object which also prepares the object to 
 - Assignment operator overload.
 
 **Destructor:**
-The subroutine called to destruct an object.
+The subroutine called to destruct an object. It is called every time an object loses its scope.
 
 **C VS C++**
 
@@ -89,11 +89,13 @@ Contrary to a `strcut`, a `class` is made to offer an interface, that has some d
 
 **VTABLE and VPTR:**
 
-**vtable** is a table of function pointers maintained per class.
+**vtable** is a table of function pointers. Every class has a vTable
 
-**vpt**r is a pointer to vtable and is maintained per object.
+**vptr**r is a pointer to vtable and is maintained per object. Every object has a vptr
 
 For every constructor the compiler sets the vptr of the object being created which will point to the vtable of the class.
+
+Code with the polymorphic functional call – At every location where a polymorphic call is made, the compiler inserts code in order to first look for vptr using the base class pointer or reference. The vTable of a derived class can be accessed once the vptr is successfully fetched. Address of derived class function show() is accessed and called using the vTable.
 
 [What is Late Binding or Dynamic Linkage](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#what-is-late-binding-or-dynamic-linkage)
 
