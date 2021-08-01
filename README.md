@@ -142,6 +142,7 @@ To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Program
   - [Stacks and Queues](https://github.com/JoanaMota/LearnCPP/wiki/Stacks-Queues)
   - [Sorting Vectors, Deque and Friend](https://github.com/JoanaMota/LearnCPP/wiki/Sorting-Vectors-Deque-Friend)
   - [STL complex data types](https://github.com/JoanaMota/LearnCPP/wiki/Complex-Data-Types)
+  - [Tuples](https://github.com/JoanaMota/LearnCPP/blob/main/TheStandardTemplateLibrarySTL/tuples.cpp)
 
 - Operating Overloading
 
