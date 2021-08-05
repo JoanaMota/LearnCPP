@@ -12,20 +12,20 @@ Let's start with the basics:
 
 **`this` pointer:** is a constant pointer that holds the memory address of the current object. They are not available in static member functions since static member functions can be called without any object.
 
-**The 4 pillars of OOP:**
+### The 4 pillars of OOP:
 
 - Abstraction: used for hiding the internal implementations and display only the required details to the user.
 - Encapsulation: it's a mechanism that binds the data and operations together, thus hiding the details from the user. Encapsulation can be achieved with the help of access specifiers that are public, private and protected in C++. With the help of them, we can provide or prevent access directly to a user.
 - Inheritance: it's the possibility of creating a new child class from existing classes, and thus inheriting the properties of the parent class. The parent class is then referred as the Base Class and the child the Derived Class. Normally used for code reusability.
 - Polymorphism: it enables a child class to have the same functionality as its parent class and at the same time have its onw methods and behaviours. However a parent class cannot have the functions of a child class.
 
-**Access Specifiers:**
+### Access Specifiers:
 
 - public: members and methods can be accessed outside of the class
 - private: members and methods can only be accessed inside its class
 - protected: members and methods can be accessed inside its class and also derived classes
 
-**Types of Inheritance:**
+### Types of Inheritance:
 
 - Single: one base class and one derived class.
 - Multiple: a derived class inherits from two or more classes.
@@ -33,7 +33,7 @@ Let's start with the basics:
 - Hierarchical: multiple derived classes inherit the properties of the same base class.
 - Hybrid: It's Virtual Inheritance. It is a combination of Multilevel and Hierarchical inheritance.
 
-**[Abstract Class](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions) VS Interface**
+### [Abstract Class](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions) VS Interface
 
 |               |                               Abstract Class                                |                      Interface                       |
 | :-----------: | :-------------------------------------------------------------------------: | :--------------------------------------------------: |
@@ -47,7 +47,8 @@ Let's start with the basics:
 
 **Pure virtual method** is a virtual method which does not need to be defined but only declared. It is declared by assigning 0 to a virtual method.
 
-**Constructor:**
+### Constructor:
+
 Its the subroutine called to create an object which also prepares the object to be used. It has the same name as the class.
 
 [Types of constructors](https://github.com/JoanaMota/LearnCPP/blob/main/Cpp11NewFeatures/19_constructors_and_memory.cpp):
@@ -57,10 +58,11 @@ Its the subroutine called to create an object which also prepares the object to 
 - Copy Constructor -> initializes an object using another object of the same class;
 - Assignment operator overload.
 
-**Destructor:**
+### Destructor:
+
 The subroutine called to destruct an object. It is called every time an object loses its scope.
 
-**C VS C++**
+### C VS C++
 
 |                            C                            |                                                   C++                                                    |
 | :-----------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
@@ -71,7 +73,8 @@ The subroutine called to destruct an object. It is called every time an object l
 |     `scanf()` and `printf()` used for input/output      |                     uses streams to perform input `cin` and output `cout` operations                     |
 | exception handling is done in traditional if-else style |                              supports exception handling at language level                               |
 
-**Difference between `class` and `struct`:**
+### `class` VS `struct`:
+
 Class and struct are basically the same, the only difference is that the visibility of the members by default in a structure is public and private in a class.
 
 Since they are basically the same how can we choose to use one or the other?
@@ -80,14 +83,14 @@ A `strcut` is more a bundle, it contains several related elements that need to b
 
 Contrary to a `strcut`, a `class` is made to offer an interface, that has some degree of separation from its implementation. A `class` is not just there to store data. In fact a user of a class is not supposed to know what data the class is storing, or if it contains any data at all for that matter. All he cares about is its responsibilities, expressed via its interface.
 
-**Differences between references and pointers:**
+### Differences between references and pointers:
 
 1. Once a reference is created, it cannot be later made to reference another object; it cannot be reseated. This is often done with pointers.
 2. References cannot be NULL. Pointers are often made NULL to indicate that they are not pointing to any valid thing.
 3. A reference must be initialized when declared. There is no such restriction with pointers.
 4. References are safer and easier to use.
 
-**VTABLE and VPTR:**
+### VTABLE and VPTR:
 
 **vtable** is a table of function pointers. Every class has a vTable
 
@@ -97,13 +100,9 @@ For every constructor the compiler sets the vptr of the object being created whi
 
 Code with the polymorphic functional call – At every location where a polymorphic call is made, the compiler inserts code in order to first look for vptr using the base class pointer or reference. The vTable of a derived class can be accessed once the vptr is successfully fetched. Address of derived class function show() is accessed and called using the vTable.
 
-[What is Late Binding or Dynamic Linkage](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#what-is-late-binding-or-dynamic-linkage)
+### [What is Late Binding or Dynamic Linkage](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#what-is-late-binding-or-dynamic-linkage)
 
-[Inline Functions](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions)
-
-**Friend Class:** a class which can access private and protected members of other class in which it is declared as friend. Friendship is not mutual. Friendship is not inherited
-
-**`malloc()` VS `new`**
+### `malloc()` VS `new`
 
 - `new` is an operator, `malloc()` is a function.
 - `new` returns exact data type, while `malloc()` returns void pointer.
@@ -114,15 +113,27 @@ int *n = new int(10); // initialization with new()
 str = (char *) malloc(15); //malloc()
 ```
 
-**`delete` VS `free()`:**
+### `delete` VS `free()`:
 
 `free()` is used on resources allocated by `malloc()`, or `calloc()` in C.
 
 `delete` is used on resources allocated by new.
 
-**Dynamic Polymorphism VS...**
+### Static VS Dynamic Polymorphism
 
----
+**Static** polymorphism memory will be allocated at compile-time and is also known as early binding. It provides fast execution since it is analyzed early at compile time. Less flexible. Example: function overloading and operator overloading.
+
+**Dynamic** polymorphism memory will be allocated at run-time and is also known as late binding. It's slow because it is analyzed at runtime. More flexible. Example: virtual functions and pointers.
+
+### Types of Class Member Functions
+
+- Simple
+- Static: means that no matter how many objects of the class are created, there is only one copy of the static member. The function is independent of any particular object of the class. Can be called even if no objects of the class exist. Can only access static data members, thus they don't have access to the `this` pointer.
+- Const: functions can never modify the object or its related data members.
+- [Inline](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions)
+- Friend: are made to give private access to non-class functions.
+
+**Friend Class:** a class which can access private and protected members of other class in which it is declared as friend. Friendship is not mutual. Friendship is not inherited
 
 To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Programming and here are some of the exercises implementations.
 
