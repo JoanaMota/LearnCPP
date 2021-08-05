@@ -133,7 +133,9 @@ str = (char *) malloc(15); //malloc()
 - [Inline](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions)
 - Friend: are made to give private access to non-class functions.
 
-**Friend Class:** a class which can access private and protected members of other class in which it is declared as friend. Friendship is not mutual. Friendship is not inherited
+**Friend Class:** a class which can access private and protected members of other class in which it is declared as friend. Friendship is not mutual. Friendship is not inherited.
+
+---
 
 To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Programming and here are some of the exercises implementations.
 
