@@ -1,8 +1,8 @@
-# Learn Advanced C++
+# My Journey Learning C++
 
-My journey to increase my knowledge in C++.
+:star: This is a collection of all my notes and thoughts that I have been assembling while learning and trying to increase my knowledge in C++.
 
-Let's start with the basics:
+:point_right: Let's start with the basics:
 
 **Class:** generally specifies the structure of a data type, which holds its own data members and member functions, that can be accessed and used by creating an instance of that class.
 
@@ -128,7 +128,7 @@ str = (char *) malloc(15); //malloc()
 ### Types of Class Member Functions
 
 - Simple
-- Static: means that no matter how many objects of the class are created, there is only one copy of the static member. The function is independent of any particular object of the class. Can be called even if no objects of the class exist. Can only access static data members, thus they don't have access to the `this` pointer.
+- Static: means that no matter how many objects of the class are created, there is only one copy of the static member. The function is independent of any particular object of the class. Can be called even if no objects of the class exist. Can only access static data members, thus they don't have access to the `this` pointer, thus nor its related data members.
 - Const: functions can never modify the object or its related data members.
 - [Inline](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions)
 - Friend: are made to give private access to non-class functions.
@@ -137,9 +137,9 @@ str = (char *) malloc(15); //malloc()
 
 ---
 
-To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Programming and here are some of the exercises implementations.
+:mortar_board: To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Programming and here are some of the exercises implementations.
 
-> For more detailed information about the subjects checkout my notes on the [Wiki](https://github.com/JoanaMota/LearnCPP/wiki) :wink:
+:mag: For more detailed information about the subjects checkout my notes on the [Wiki](https://github.com/JoanaMota/LearnCPP/wiki) :wink:
 
 - The Standard Template Library (STL) Data Structures
 
@@ -201,6 +201,7 @@ To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Program
     - [CLL Insertion and Deletion](https://github.com/JoanaMota/LearnCPP/wiki/Circular-Linked-List-Insertion-Deletion)
 
 - Other Topics
+
   - [Multiple Inheritance](https://github.com/JoanaMota/LearnCPP/wiki/Multiple-Inheritance)
   - [`auto` Keyword](https://github.com/JoanaMota/LearnCPP/wiki/Auto)
   - [Enhanced `for` Loop](https://github.com/JoanaMota/LearnCPP/wiki/Enhanced-For-Loop)
@@ -228,3 +229,7 @@ To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Program
     - [Normal Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Pointers#pointers)
     - [Unique Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Pointers#unique-pointers)
     - [Shared Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Pointers#shared-pointers)
+  - [Compiler Optimization](https://github.com/JoanaMota/LearnCPP/wiki/Compiler-Optimization)
+
+- Algorithms
+  - [Reverse Vector](https://github.com/JoanaMota/LearnCPP/wiki/Reverse-Vector)
