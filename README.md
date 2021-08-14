@@ -225,7 +225,7 @@ int main(void)
 - Virtual Functions
 
   - [Virtual Functions Intro](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions)
-  - [Virtual Destructor, Constructors and Copy Constructors](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Destructore-Constructores-Copy-Constructors)
+  - [Virtual Destructor, Constructors and Copy Constructors](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Destructors-Constructors-Copy-Constructors)
   - [Run Time Type Information RTTI](https://github.com/JoanaMota/LearnCPP/wiki/Run-Time-Type-Information-RTTI)
 
 - Passing Functions to Functions
@@ -260,8 +260,8 @@ int main(void)
   - [Delegating Constructors](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#delegating-constructors)
   - [Lambda Expressions](https://github.com/JoanaMota/LearnCPP/wiki/Lambda-Expressions)
   - [The Standard Function Type](https://github.com/JoanaMota/LearnCPP/wiki/Standard-Function-Type)
-  - [Return Value Optimization](https://github.com/JoanaMota/LearnCPP/wiki/Constructores)
-  - [Constructors and Memory](https://github.com/JoanaMota/LearnCPP/wiki/Constructores#constructors-and-memory)
+  - [Return Value Optimization](https://github.com/JoanaMota/LearnCPP/wiki/Constructors)
+  - [Constructors and Memory](https://github.com/JoanaMota/LearnCPP/wiki/Constructors#constructors-and-memory)
   - [RValues and LValues](https://github.com/JoanaMota/LearnCPP/wiki/RValue-LValue-References)
     - [LValue References](https://github.com/JoanaMota/LearnCPP/wiki/RValue-LValue-References#lvalue-references)
     - [RValue References](https://github.com/JoanaMota/LearnCPP/wiki/RValue-LValue-References#rvalue-references)
