@@ -177,6 +177,10 @@ int main(void)
 
 **Friend Class:** a class which can access private and protected members of other class in which it is declared as friend. Friendship is not mutual. Friendship is not inherited.
 
+### `itr++` VS `++itr`
+
+`itr++` operator is more expensive than the pre-increment `++itr` operator. The post-increment operator generates a copy of the element before proceeding with incrementing the element and returning the copy. Moreover, most compilers will automatically optimize `itr++` by converting it implicitly into `++itr`.
+
 ---
 
 :mortar_board: To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Programming and here are some of the exercises implementations.
