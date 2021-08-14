@@ -121,9 +121,51 @@ str = (char *) malloc(15); //malloc()
 
 ### Static VS Dynamic Polymorphism
 
-**Static** polymorphism memory will be allocated at compile-time and is also known as early binding. It provides fast execution since it is analyzed early at compile time. Less flexible. Example: function overloading and operator overloading.
+**Static** polymorphism memory will be allocated at compile-time and is also known as early binding. It provides fast execution since it is analyzed early at compile time. Less flexible. Example: function overloading, operator overloading and templates.
+
+```cpp
+// Function Overloading
+void add(int a, int b){ cout << "Int result = " << (a + b) << endl; }
+void add(int a, int b, int c){ cout << "Triple int result = " << (a + b + c) << endl; }
+void add(float a, float b){ cout << "Float result = " << (a + b) << endl; }
+// Templated Functions
+template <typename T>
+void multiply(T a, T b){ cout << "Templated Function Result = " << (a * b) << endl; }
+
+int main(void)
+{
+    add(val1, val2);
+    add(val1, val2, val3);
+    add(valf1, valf2);
+    multiply(val1, val2);
+    multiply(valf1, valf2);
+    return 0;
+}
+```
+
+Compiler searches for function with the correct signature and uses the one that fits best. :warning: Each time you leave something for compiler to deduce — make sure there is no room for ambiguity left.
 
 **Dynamic** polymorphism memory will be allocated at run-time and is also known as late binding. It's slow because it is analyzed at runtime. More flexible. Example: virtual functions and pointers.
+
+```cpp
+class Base
+{
+public:
+    virtual void show() { cout << "Base Class" << endl; }
+};
+class Derived : public Base
+{
+public:
+    void show() { cout << "Derived Class" << endl; }
+};
+
+int main(void)
+{
+    Base *bp = new Derived;
+    bp->show(); // Runtime Polymorphism in Action
+    return 0;
+}
+```
 
 ### Types of Class Member Functions
 
