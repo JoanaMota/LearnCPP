@@ -17,7 +17,7 @@
 - Abstraction: used for hiding the internal implementations and display only the required details to the user.
 - Encapsulation: it's a mechanism that binds the data and operations together, thus hiding the details from the user. Encapsulation can be achieved with the help of access specifiers that are public, private and protected in C++. With the help of them, we can provide or prevent access directly to a user.
 - Inheritance: it's the possibility of creating a new child class from existing classes, and thus inheriting the properties of the parent class. The parent class is then referred as the Base Class and the child the Derived Class. Normally used for code reusability.
-- Polymorphism: it enables a child class to have the same functionality as its parent class and at the same time have its onw methods and behaviours. However a parent class cannot have the functions of a child class.
+- Polymorphism: it enables a child class to have the same functionality as its parent class and at the same time have its own methods and behaviours. However a parent class cannot have the functions of a child class. There are 2 types of polymorphism [static and dynamic](https://github.com/JoanaMota/LearnCPP#static-vs-dynamic-polymorphism).
 
 ### Access Specifiers:
 
@@ -31,7 +31,7 @@
 - Multiple: a derived class inherits from two or more classes.
 - Multilevel: the derived class is the base class for another class.
 - Hierarchical: multiple derived classes inherit the properties of the same base class.
-- Hybrid: It's Virtual Inheritance. It is a combination of Multilevel and Hierarchical inheritance.
+- Hybrid: It's Virtual Inheritance. It is a combination of Multilevel and Hierarchical inheritance. While it’s ideal to avoid virtual inheritance altogether it can be helpful in some use cases like in [The Diamond Problem](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions#the-diamond-problem)
 
 ### [Abstract Class](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions) VS Interface
 
@@ -73,6 +73,21 @@ The subroutine called to destruct an object. It is called every time an object l
 |     `scanf()` and `printf()` used for input/output      |                     uses streams to perform input `cin` and output `cout` operations                     |
 | exception handling is done in traditional if-else style |                              supports exception handling at language level                               |
 
+You can call a C function inside a C++ program through the usage of `extern "C" {}`
+
+```cpp
+extern "C"{
+void func(int i);
+void print(int i);
+}
+
+void myfunc(int i)
+{
+   func(i);
+   print(i);
+}
+```
+
 ### `class` VS `struct`:
 
 Class and struct are basically the same, the only difference is that the visibility of the members by default in a structure is public and private in a class.
@@ -94,7 +109,7 @@ Contrary to a `strcut`, a `class` is made to offer an interface, that has some d
 
 **vtable** is a table of function pointers. Every class has a vTable
 
-**vptr**r is a pointer to vtable and is maintained per object. Every object has a vptr
+**vptr** is a pointer to vtable and is maintained per object. Every object has a vptr
 
 For every constructor the compiler sets the vptr of the object being created which will point to the vtable of the class.
 
@@ -171,15 +186,67 @@ int main(void)
 
 - Simple
 - Static: means that no matter how many objects of the class are created, there is only one copy of the static member. The function is independent of any particular object of the class. Can be called even if no objects of the class exist. Can only access static data members, thus they don't have access to the `this` pointer, thus nor its related data members.
-- Const: functions can never modify the object or its related data members.
+- Const: functions can never modify the object or its related data members. The const modifier for a static member function is meaningless, because there is no object associated with the call.
 - [Inline](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions)
 - Friend: are made to give private access to non-class functions.
+- Mutable: is mainly used to allow a particular data member of const object to be modified. `mutable` is particularly useful if most of the members should be constant but a few need to be updateable. You cannot use the mutable specifier with names declared as static or const, or reference.
+- Volatile: informs the compiler that a variable may change without the compiler knowing it. Variables that are declared as volatile will not be cached by the compiler, and will thus always be read from memory.
+
+```cpp
+class A
+{
+  public:
+    A() : x(4), y(5) { };
+    mutable int x;
+    int y;
+};
+
+int main()
+{
+  const A var2;
+  var2.x = 345;
+  // var2.y = 2345;
+}
+```
 
 **Friend Class:** a class which can access private and protected members of other class in which it is declared as friend. Friendship is not mutual. Friendship is not inherited.
 
 ### `itr++` VS `++itr`
 
 `itr++` operator is more expensive than the pre-increment `++itr` operator. The post-increment operator generates a copy of the element before proceeding with incrementing the element and returning the copy. Moreover, most compilers will automatically optimize `itr++` by converting it implicitly into `++itr`.
+
+### [Shallow Copy and Deep Copy](https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c/)
+
+### [The Diamond Problem](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions#the-diamond-problem)
+
+### [What is C++ Garbage Collection?](https://www.educba.com/c-plus-plus-garbage-collection/)
+
+### How can you make sure that a function is called only with the created definition?
+
+For example if you function to be called only with the definition `void foo(int, int)` but not with other types you can:
+
+- Delete the other options though templates
+
+```cpp
+void foo(int a, int b) {
+// whatever
+}
+template <typename T1, typename T2>
+void foo(T1 a, T2 b) = delete;
+```
+
+- Or without the delete by simply
+
+```cpp
+template <class T, class U>
+void foo(T arg1, U arg2);
+
+template <>
+void foo(int arg1, int arg2)
+{
+    //...
+}
+```
 
 ---
 
@@ -279,3 +346,4 @@ int main(void)
 
 - Algorithms
   - [Reverse Vector](https://github.com/JoanaMota/LearnCPP/wiki/Reverse-Vector)
+  - [Recursion](https://github.com/JoanaMota/LearnCPP/wiki/Recursion)
