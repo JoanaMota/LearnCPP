@@ -345,5 +345,7 @@ void foo(int arg1, int arg2)
   - [Compiler Optimization](https://github.com/JoanaMota/LearnCPP/wiki/Compiler-Optimization)
 
 - Algorithms
-  - [Reverse Vector](https://github.com/JoanaMota/LearnCPP/wiki/Reverse-Vector)
+  - [Reverse `vector`](https://github.com/JoanaMota/LearnCPP/wiki/Vector-Algos#reverse-vector)
+  - [Contain Duplicates `vector`](https://github.com/JoanaMota/LearnCPP/wiki/Vector-Algos#contain-duplicates-vector)
+  - [Remove Duplicates `vector`](https://github.com/JoanaMota/LearnCPP/wiki/Vector-Algos#remove-duplicates-vector)
   - [Recursion](https://github.com/JoanaMota/LearnCPP/wiki/Recursion)
