@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
 
 int singleNumber(std::vector<int> &nums)
 {
