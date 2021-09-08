@@ -6,11 +6,9 @@ std::vector<int> intersect(std::vector<int> &nums1, std::vector<int> &nums2)
 {
     std::vector<int> output;
     std::unordered_map<int, int> mapNums1;
-
-    for (int i = 0; i < nums1.size(); ++i)
+    for (int num : nums1)
     {
-        int temp = mapNums1[nums1[i]];
-        mapNums1[nums1[i]] = temp + 1;
+        mapNums1[num]++;
     }
     for (int i = 0; i < nums2.size(); ++i)
     {
@@ -21,7 +19,6 @@ std::vector<int> intersect(std::vector<int> &nums1, std::vector<int> &nums2)
             mapNums1[nums2[i]] = temp - 1;
         }
     }
-
     return output;
 }
 
