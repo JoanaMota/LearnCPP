@@ -95,14 +95,57 @@ int main()
     std::cout << "Stack size: " << testQueue.size() << std::endl;
 
     std::cout << std::endl;
-    std::cout << "--Iterate through stack--" << std::endl;
+    std::cout << "--Iterate through queue--" << std::endl;
     while (testQueue.size() > 0)
     {
         CTest &test = testQueue.front();
         test.print();
         testQueue.pop();
     }
-    std::cout << "--END Iterate through stack--" << std::endl;
+    std::cout << "--END Iterate through queue--" << std::endl;
 
+    // DEQUE
+    std::cout << "------QUEUE------" << std::endl;
+    // Declare a deque
+    std::deque<int> dq;
+
+    // Insert element in the front
+    dq.push_front(10);
+    dq.push_front(5);
+    dq.push_front(3);
+
+    // Delete elements from the the front
+    dq.pop_front();
+    dq.pop_front();
+
+    // Insert elements in the back
+    dq.push_back(1);
+    dq.push_back(50);
+    dq.push_back(2);
+
+    // Delete elements from the the back
+    dq.pop_back();
+    dq.pop_back();
+
+    std::cout << "Elements in deque are: " << std::endl;
+    for (int val : dq)
+        std::cout << val << " ";
+
+    std::deque<int>::iterator it = dq.begin();
+    ++it;
+    it = dq.insert(it, 105);
+    std::cout << "Elements in deque are: " << std::endl;
+    for (int val : dq)
+        std::cout << val << " ";
+
+    std::cout << std::endl;
+    // Print the element stored in deque and remove them
+    while (!dq.empty())
+    {
+        std::cout << dq.back() << " ";
+        dq.pop_back();
+    }
+
+    std::cout << std::endl;
     return 0;
 }

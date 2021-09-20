@@ -2,7 +2,9 @@
 
 :star: This is a collection of all my notes and thoughts that I have been assembling while learning and trying to increase my knowledge in C++.
 
-:point_right: Let's start with the basics:
+### :mag: For more detailed information about C++ main topics checkout my full notes on the [Wiki](https://github.com/JoanaMota/LearnCPP/wiki) :wink:
+
+:point_right: Now let's start with the basics:
 
 **Class:** generally specifies the structure of a data type, which holds its own data members and member functions, that can be accessed and used by creating an instance of that class.
 
@@ -251,104 +253,3 @@ void foo(int arg1, int arg2)
 ---
 
 :mortar_board: To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Programming and here are some of the exercises implementations.
-
-:mag: For more detailed information about the subjects checkout my notes on the [Wiki](https://github.com/JoanaMota/LearnCPP/wiki) :wink:
-
-- The Standard Template Library (STL) Data Structures
-
-  - [Vectors](https://github.com/JoanaMota/LearnCPP/wiki/Vectors)
-    - Vectors and Memory
-    - 2D Vectors
-  - [Lists](https://github.com/JoanaMota/LearnCPP/wiki/Lists)
-  - [Maps](https://github.com/JoanaMota/LearnCPP/wiki/Maps)
-    - Custom objects as Map values
-    - Custom objects as Map keys
-    - Multimap
-  - [Sets](https://github.com/JoanaMota/LearnCPP/wiki/Sets)
-  - [Stacks and Queues](https://github.com/JoanaMota/LearnCPP/wiki/Stacks-Queues)
-  - [Sorting Vectors, Deque and Friend](https://github.com/JoanaMota/LearnCPP/wiki/Sorting-Vectors-Deque-Friend)
-  - [STL complex data types](https://github.com/JoanaMota/LearnCPP/wiki/Complex-Data-Types)
-  - [Tuples](https://github.com/JoanaMota/LearnCPP/blob/main/TheStandardTemplateLibrarySTL/tuples.cpp)
-
-- Operating Overloading
-
-  - [Overloading the assignment operator `=`](https://github.com/JoanaMota/LearnCPP/wiki/Assignment-Operator-Overloading)
-  - [Overloading left bit shift `<<`](https://github.com/JoanaMota/LearnCPP/wiki/Left-Bit-Shift-Overloading)
-  - [A complex number class](https://github.com/JoanaMota/LearnCPP/wiki/Complex-Number-Class)
-  - [Overloading plus operator `+`](https://github.com/JoanaMota/LearnCPP/wiki/Plus-Operator-Overloading)
-  - [Overloading equality test](https://github.com/JoanaMota/LearnCPP/wiki/Equality-Test-Overloading)
-  - [Overloading the dereference operator `*`](https://github.com/JoanaMota/LearnCPP/wiki/Dereference-Operator-Overloading)
-
-- Templates
-
-  - [Templates Intro](https://github.com/JoanaMota/LearnCPP/wiki/Templates)
-  - [Template Functions](https://github.com/JoanaMota/LearnCPP/wiki/Template-Functions)
-  - [Template Classes](https://github.com/JoanaMota/LearnCPP/wiki/Template-Classes)
-  - [Template Functions and Type Inference](https://github.com/JoanaMota/LearnCPP/wiki/Template-Functions-and-Type-Inference)
-  - [Template Arguments](https://github.com/JoanaMota/LearnCPP/wiki/Template-Arguments)
-  - [Template Specialization](https://github.com/JoanaMota/LearnCPP/wiki/Template-Specialization)
-  - [Template Partial and Explicit Specialization](https://github.com/JoanaMota/LearnCPP/wiki/Template-Partial-And-Explicit-Specialization)
-
-- Virtual Functions
-
-  - [Virtual Functions Intro](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions)
-  - [Virtual Destructor, Constructors and Copy Constructors](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Destructors-Constructors-Copy-Constructors)
-  - [Run Time Type Information RTTI](https://github.com/JoanaMota/LearnCPP/wiki/Run-Time-Type-Information-RTTI)
-
-- Passing Functions to Functions
-
-  - [Function Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Function-Pointers)
-  - [Abstract Classes and Pure Virtual Functions](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions)
-  - [Functors](https://github.com/JoanaMota/LearnCPP/wiki/Functors)
-
-- [Linked List](https://github.com/JoanaMota/LearnCPP/wiki/Linked-List-Intro)
-
-  - Singly Linked List
-    - [SLL Insertion and Deletion](https://github.com/JoanaMota/LearnCPP/wiki/Singly-Linked-List-Insertion-Deletion)
-    - [SLL Length, Search, Count and Remove Duplicates](https://github.com/JoanaMota/LearnCPP/wiki/Singly-LL-Length-Search-Count)
-    - [SLL Reverse and Segregate](https://github.com/JoanaMota/LearnCPP/wiki/Singly-LL-Reversing-Segregate)
-  - Doubly Linked List
-    - [DLL Insertion and Deletion](https://github.com/JoanaMota/LearnCPP/wiki/Doubly-Linked-List-Insertion-Deletion)
-    - [DLL Length, Reverse and Remove Duplicates](https://github.com/JoanaMota/LearnCPP/wiki/DLL-Remove-Duplicates-Length-Reverse)
-  - Circular Linked List
-    - [CLL Insertion and Deletion](https://github.com/JoanaMota/LearnCPP/wiki/Circular-Linked-List-Insertion-Deletion)
-
-- Other Topics
-
-  - [Multiple Inheritance](https://github.com/JoanaMota/LearnCPP/wiki/Multiple-Inheritance)
-  - [`auto` Keyword](https://github.com/JoanaMota/LearnCPP/wiki/Auto)
-  - [Enhanced `for` Loop](https://github.com/JoanaMota/LearnCPP/wiki/Enhanced-For-Loop)
-  - [Nested Template Classes](https://github.com/JoanaMota/LearnCPP/wiki/Nested-Template-Classes)
-  - [Ring/Circular Buffer](https://github.com/JoanaMota/LearnCPP/wiki/Ring-Buffer)
-  - [Iterable Classes](https://github.com/JoanaMota/LearnCPP/wiki/Iterable-Classes)
-  - [Initialization C++98 vs C++11](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#initialization)
-  - [Initializer Lists](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#initializer-lists)
-  - [Object Initialization, Default and Delete](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#object-initialization-default-and-delete)
-  - [Delegating Constructors](https://github.com/JoanaMota/LearnCPP/wiki/Initialization#delegating-constructors)
-  - [Lambda Expressions](https://github.com/JoanaMota/LearnCPP/wiki/Lambda-Expressions)
-  - [The Standard Function Type](https://github.com/JoanaMota/LearnCPP/wiki/Standard-Function-Type)
-  - [Return Value Optimization](https://github.com/JoanaMota/LearnCPP/wiki/Constructors)
-  - [Constructors and Memory](https://github.com/JoanaMota/LearnCPP/wiki/Constructors#constructors-and-memory)
-  - [RValues and LValues](https://github.com/JoanaMota/LearnCPP/wiki/RValue-LValue-References)
-    - [LValue References](https://github.com/JoanaMota/LearnCPP/wiki/RValue-LValue-References#lvalue-references)
-    - [RValue References](https://github.com/JoanaMota/LearnCPP/wiki/RValue-LValue-References#rvalue-references)
-  - Casting
-    - [Static Cast](https://github.com/JoanaMota/LearnCPP/wiki/Casting#static-cast)
-    - [Dynamic Cast](https://github.com/JoanaMota/LearnCPP/wiki/Casting#dynamic-cast)
-    - [Reinterpret Cast](https://github.com/JoanaMota/LearnCPP/wiki/Casting#reinterpret-cast)
-  - [Perfect Forwarding](https://github.com/JoanaMota/LearnCPP/wiki/Perfect-Forwarding)
-  - [Bind](https://github.com/JoanaMota/LearnCPP/wiki/Bind)
-  - Pointers
-    - [Normal Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Pointers#pointers)
-    - [Unique Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Pointers#unique-pointers)
-    - [Shared Pointers](https://github.com/JoanaMota/LearnCPP/wiki/Pointers#shared-pointers)
-  - [Compiler Optimization](https://github.com/JoanaMota/LearnCPP/wiki/Compiler-Optimization)
-
-- [Algorithms](https://github.com/JoanaMota/LearnCPP/wiki/Algorithms)
-  - Arrays and Vectors
-    - [Reverse `vector`](https://github.com/JoanaMota/LearnCPP/wiki/Vector-Algos#reverse-vector)
-    - [Contain Duplicates `vector`](https://github.com/JoanaMota/LearnCPP/wiki/Vector-Algos#contain-duplicates-vector)
-    - [Remove Duplicates `vector`](https://github.com/JoanaMota/LearnCPP/wiki/Vector-Algos#remove-duplicates-vector)
-    - [Recursion](https://github.com/JoanaMota/LearnCPP/wiki/Recursion)
-  - Strings and Chars
-  - Linked Lists
