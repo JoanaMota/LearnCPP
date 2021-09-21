@@ -7,6 +7,7 @@ int main()
 
     ages["Mike"] = 40;
     ages["Raj"] = 20;
+    ages["Miguel"] = 20;
     ages["Vicky"] = 30;
 
     ages["Mike"] = 70; // Overides Mikes' age
