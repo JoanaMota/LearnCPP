@@ -1,7 +1,7 @@
 #include <iostream>
 #include <list>
 
-void print(std::list<int> f_list)
+void print(std::list<int> &f_list)
 {
     for (int element : f_list)
     {

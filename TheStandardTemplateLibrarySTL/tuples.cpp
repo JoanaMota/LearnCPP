@@ -2,7 +2,7 @@
 #include <iostream>
 #include <tuple> // for tuple
 
-void print(std::tuple<char, int, float> f_data)
+void print(std::tuple<char, int, float> &f_data)
 {
     std::cout << "The values of tuple are : ";
     std::cout << std::get<0>(f_data) << " " << std::get<1>(f_data);
