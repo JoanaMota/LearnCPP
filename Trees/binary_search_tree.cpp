@@ -14,25 +14,27 @@ struct TreeNode
     }
 };
 
-bool isBST(TreeNode *root)
+bool isBST(TreeNode *root, TreeNode *l = NULL, TreeNode *r = NULL)
 {
+    // Base condition
     if (root == NULL)
         return true;
 
-    /* false if left is > than root */
-    if (root->left != NULL && root->left->data > root->data)
+    // if left node exist then check it has
+    // correct data or not i.e. left node's data
+    // should be less than root's data
+    if (l != NULL && root->data <= l->data)
         return false;
 
-    /* false if right is < than root */
-    if (root->right != NULL && root->right->data < root->data)
+    // if right node exist then check it has
+    // correct data or not i.e. right node's data
+    // should be greater than root's data
+    if (r != NULL && root->data >= r->data)
         return false;
 
-    /* false if, recursively, the left or right is not a BST */
-    if (!isBST(root->left) || !isBST(root->right))
-        return false;
-
-    /* passing all that, it's a BST */
-    return true;
+    // check recursively for every node.
+    return isBST(root->left, l, root) &&
+           isBST(root->right, root, r);
 }
 
 void bfs(TreeNode *root)
@@ -155,14 +157,11 @@ TreeNode *deleteNode(TreeNode *root, int data)
 }
 int main()
 {
-    TreeNode *root = new TreeNode(8);
-    root->left = new TreeNode(3);
-    root->right = new TreeNode(10);
-    root->right->right = new TreeNode(14);
-    root->left->left = new TreeNode(1);
-    root->left->right = new TreeNode(6);
-    root->left->right->left = new TreeNode(4);
-    root->left->right->right = new TreeNode(7);
+    TreeNode *root = new TreeNode(5);
+    root->left = new TreeNode(4);
+    root->right = new TreeNode(6);
+    root->right->left = new TreeNode(3);
+    root->right->right = new TreeNode(7);
 
     std::cout << "Breadth First Search: ";
     bfs(root);

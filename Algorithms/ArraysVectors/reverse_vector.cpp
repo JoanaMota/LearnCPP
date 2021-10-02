@@ -25,7 +25,7 @@ int main()
     std::vector<int> dataTemp1(data.rbegin(), data.rend());
     data.swap(dataTemp1); // or, call `v = r`
     std::cout << "Reversed Vector with reverse iterator and swap" << std::endl;
-    printVector(data);
+    printVector(dataTemp1);
 
     data = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     for (auto start = data.begin(), end = std::prev(data.end());
