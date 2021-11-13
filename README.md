@@ -130,7 +130,7 @@ int *n = new int(10); // initialization with new()
 str = (char *) malloc(15); //malloc()
 ```
 
-### `delete` VS `free()`:
+### `free()` VS `delete`:
 
 `free()` is used on resources allocated by `malloc()`, or `calloc()` in C.
 
