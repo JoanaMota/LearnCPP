@@ -19,7 +19,7 @@
 - Abstraction: used for hiding the internal implementations and display only the required details to the user.
 - Encapsulation: it's a mechanism that binds the data and operations together, thus hiding the details from the user. Encapsulation can be achieved with the help of access specifiers that are public, private and protected in C++. With the help of them, we can provide or prevent access directly to a user.
 - Inheritance: it's the possibility of creating a new child class from existing classes, and thus inheriting the properties of the parent class. The parent class is then referred as the Base Class and the child the Derived Class. Normally used for code reusability.
-- Polymorphism: it enables a child class to have the same functionality as its parent class and at the same time have its own methods and behaviours. However a parent class cannot have the functions of a child class. There are 2 types of polymorphism [static and dynamic](https://github.com/JoanaMota/LearnCPP#static-vs-dynamic-polymorphism).
+- Polymorphism: the ability of different objects to behave differently for the same request, it enables a child class to have the same functionality as its parent class and at the same time have its own behaviours. However a parent class cannot have the functions of a child class. There are 2 types of polymorphism [static (method overloading) and dynamic (method overriding)](https://github.com/JoanaMota/LearnCPP#static-vs-dynamic-polymorphism).
 
 ### Access Specifiers:
 
@@ -45,10 +45,46 @@
 |    Members    |                    Can be public, private and protected                     |                  Have to be public                   |
 |     Speed     |                                    Fast                                     |                Is comparatively slow                 |
 
-**Virtual method** is used with inheritance and is a method which can be redefined in the derived class.The usage of the virtual keyword tells the compiler to perform dynamic linkage or late binding on the method. Virtual functions are resolved at runtime.
+[**`virtual` method**](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions) is used with inheritance and is a method which can be redefined in the derived class.The usage of the virtual keyword tells the compiler to perform dynamic linkage or late binding on the method. Virtual functions are resolved at runtime.
 
-**Pure virtual method** is a virtual method which does not need to be defined but only declared. It is declared by assigning 0 to a virtual method.
+**Pure `virtual` method** is a virtual method which does not need to be defined but only declared. It is declared by assigning 0 to a virtual method.
 
+Keywords `override` and `final` allow to better express your intentions with what you want to do with virtual functions.
+
+`override`: used to tag a method from a derived class that overrides a virtual method.
+
+```cpp
+class Base
+{
+public:
+    virtual void f()
+    {
+        std::cout << "Base class default behaviour\n";
+    }
+};
+
+class Derived : public Base
+{
+public:
+    void f() override
+    {
+        std::cout << "Derived class overridden behaviour\n";
+    }
+};
+```
+
+`final`: used to prevent any derived class to override that base class member function.
+
+```cpp
+class Derived : public Base
+{
+public:
+    void f() final
+    {
+        std::cout << "Derived class overridden behaviour\n";
+    }
+};
+```
 ### Constructor:
 
 Its the subroutine called to create an object which also prepares the object to be used. It has the same name as the class.
@@ -96,9 +132,9 @@ Class and struct are basically the same, the only difference is that the visibil
 
 Since they are basically the same how can we choose to use one or the other?
 
-A `strcut` is more a bundle, it contains several related elements that need to be tied up together in a certain context. A `class` is more like a doer which has responsibilities.
+A `struct` is more a bundle, it contains several related elements that need to be tied up together in a certain context. A `class` is more like a doer which has responsibilities.
 
-Contrary to a `strcut`, a `class` is made to offer an interface, that has some degree of separation from its implementation. A `class` is not just there to store data. In fact a user of a class is not supposed to know what data the class is storing, or if it contains any data at all for that matter. All he cares about is its responsibilities, expressed via its interface.
+Contrary to a `struct`, a `class` is made to offer an interface, that has some degree of separation from its implementation. A `class` is not just there to store data. In fact a user of a class is not supposed to know what data the class is storing, or if it contains any data at all for that matter. All he cares about is its responsibilities, expressed via its interface.
 
 ### Differences between references and pointers:
 
@@ -162,7 +198,7 @@ int main(void)
 
 Compiler searches for function with the correct signature and uses the one that fits best. :warning: Each time you leave something for compiler to deduce — make sure there is no room for ambiguity left.
 
-**Dynamic** polymorphism memory will be allocated at run-time and is also known as late binding. It's slow because it is analyzed at runtime. More flexible. Example: virtual functions and pointers.
+**Dynamic** polymorphism memory will be allocated at run-time. The compiler determines the type of the object at runtime and then binds the function call. Is also known as Late Binding or Dynamic Linkage. It's slow because it is analyzed at runtime. More flexible. Example: virtual functions and pointers.
 
 ```cpp
 class Base
