@@ -35,6 +35,54 @@
 - Hierarchical: multiple derived classes inherit the properties of the same base class.
 - Hybrid: It's Virtual Inheritance. It is a combination of Multilevel and Hierarchical inheritance. While it’s ideal to avoid virtual inheritance altogether it can be helpful in some use cases like in [The Diamond Problem](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions#the-diamond-problem)
 
+### Static VS Dynamic Polymorphism
+
+**Static** polymorphism memory will be allocated at compile-time and is also known as early binding. It provides fast execution since it is analyzed early at compile time. Less flexible. Example: function overloading, operator overloading and templates.
+
+```cpp
+// Function Overloading
+void add(int a, int b){ cout << "Int result = " << (a + b) << endl; }
+void add(int a, int b, int c){ cout << "Triple int result = " << (a + b + c) << endl; }
+void add(float a, float b){ cout << "Float result = " << (a + b) << endl; }
+// Templated Functions
+template <typename T>
+void multiply(T a, T b){ cout << "Templated Function Result = " << (a * b) << endl; }
+
+int main(void)
+{
+    add(val1, val2);
+    add(val1, val2, val3);
+    add(valf1, valf2);
+    multiply(val1, val2);
+    multiply(valf1, valf2);
+    return 0;
+}
+```
+
+Compiler searches for function with the correct signature and uses the one that fits best. :warning: Each time you leave something for compiler to deduce — make sure there is no room for ambiguity left.
+
+**Dynamic** polymorphism memory will be allocated at run-time. The compiler determines the type of the object at runtime and then binds the function call. Is also known as Late Binding or Dynamic Linkage. It's slow because it is analyzed at runtime. More flexible. Example: virtual functions and pointers.
+
+```cpp
+class Base
+{
+public:
+    virtual void show() { cout << "Base Class" << endl; }
+};
+class Derived : public Base
+{
+public:
+    void show() { cout << "Derived Class" << endl; }
+};
+
+int main(void)
+{
+    Base *bp = new Derived;
+    bp->show(); // Runtime Polymorphism in Action
+    return 0;
+}
+```
+
 ### [Abstract Class](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions) VS Interface
 
 |               |                               Abstract Class                                |                      Interface                       |
@@ -153,8 +201,6 @@ For every constructor the compiler sets the vptr of the object being created whi
 
 Code with the polymorphic functional call – At every location where a polymorphic call is made, the compiler inserts code in order to first look for vptr using the base class pointer or reference. The vTable of a derived class can be accessed once the vptr is successfully fetched. Address of derived class function show() is accessed and called using the vTable.
 
-### [What is Late Binding or Dynamic Linkage](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#what-is-late-binding-or-dynamic-linkage)
-
 ### `malloc()` VS `new`
 
 - `new` is an operator, `malloc()` is a function.
@@ -172,64 +218,14 @@ str = (char *) malloc(15); //malloc()
 
 `delete` is used on resources allocated by new.
 
-### Static VS Dynamic Polymorphism
-
-**Static** polymorphism memory will be allocated at compile-time and is also known as early binding. It provides fast execution since it is analyzed early at compile time. Less flexible. Example: function overloading, operator overloading and templates.
-
-```cpp
-// Function Overloading
-void add(int a, int b){ cout << "Int result = " << (a + b) << endl; }
-void add(int a, int b, int c){ cout << "Triple int result = " << (a + b + c) << endl; }
-void add(float a, float b){ cout << "Float result = " << (a + b) << endl; }
-// Templated Functions
-template <typename T>
-void multiply(T a, T b){ cout << "Templated Function Result = " << (a * b) << endl; }
-
-int main(void)
-{
-    add(val1, val2);
-    add(val1, val2, val3);
-    add(valf1, valf2);
-    multiply(val1, val2);
-    multiply(valf1, valf2);
-    return 0;
-}
-```
-
-Compiler searches for function with the correct signature and uses the one that fits best. :warning: Each time you leave something for compiler to deduce — make sure there is no room for ambiguity left.
-
-**Dynamic** polymorphism memory will be allocated at run-time. The compiler determines the type of the object at runtime and then binds the function call. Is also known as Late Binding or Dynamic Linkage. It's slow because it is analyzed at runtime. More flexible. Example: virtual functions and pointers.
-
-```cpp
-class Base
-{
-public:
-    virtual void show() { cout << "Base Class" << endl; }
-};
-class Derived : public Base
-{
-public:
-    void show() { cout << "Derived Class" << endl; }
-};
-
-int main(void)
-{
-    Base *bp = new Derived;
-    bp->show(); // Runtime Polymorphism in Action
-    return 0;
-}
-```
-
-### Types of Class Member Functions
+### Other Specifiers
 
 - Simple
-- Static: means that no matter how many objects of the class are created, there is only one copy of the static member. The function is independent of any particular object of the class. Can be called even if no objects of the class exist. Can only access static data members, thus they don't have access to the `this` pointer, thus nor its related data members.
-- Const: functions can never modify the object or its related data members. The const modifier for a static member function is meaningless, because there is no object associated with the call.
-- [Inline](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions)
-- Friend: are made to give private access to non-class functions.
-- Mutable: is mainly used to allow a particular data member of const object to be modified. `mutable` is particularly useful if most of the members should be constant but a few need to be updateable. You cannot use the mutable specifier with names declared as static or const, or reference.
-- Volatile: informs the compiler that a variable may change without the compiler knowing it. Variables that are declared as volatile will not be cached by the compiler, and will thus always be read from memory.
-
+- `static`: means that no matter how many objects of the class are created, there is only one copy of the static member. The function is independent of any particular object of the class. Can be called even if no objects of the class exist. Can only access static data members, thus they don't have access to the `this` pointer, thus nor its related data members.
+- `const`: functions can never modify the object or its related data members. The const modifier for a static member function is meaningless, because there is no object associated with the call.
+- [`inline`](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions)
+- `friend`: are made to give private access to non-class functions.
+- `mutable`: is mainly used to allow a particular data member of const object to be modified. `mutable` is particularly useful if most of the members should be constant but a few need to be updateable. You cannot use the mutable specifier with names declared as static or const, or reference.
 ```cpp
 class A
 {
@@ -246,6 +242,22 @@ int main()
   // var2.y = 2345;
 }
 ```
+- `volatile`: informs the compiler that a variable may change without the compiler knowing it. Variables that are declared as volatile will not be cached by the compiler, and will thus always be read from memory.
+- `explicit`: Specifies that a constructor or conversion function is explicit, that is, it cannot be used for implicit conversions and copy-initialization.
+```cpp
+  struct B
+{
+    explicit B(int) { }
+};
+ 
+int main()
+{
+ 
+//  B b1 = 1; // error: copy-initialization does not consider B::B(int)
+    B b2(2);  // OK: direct-initialization selects B::B(int)
+}
+```
+
 
 **Friend Class:** a class which can access private and protected members of other class in which it is declared as friend. Friendship is not mutual. Friendship is not inherited.
 
