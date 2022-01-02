@@ -28,7 +28,7 @@ void setZeroes(std::vector<std::vector<int>> &matrix)
     }
 }
 
-void setZeroesConstSpace(vector<vector<int>> &matrix)
+void setZeroesConstSpace(std::vector<std::vector<int>> &matrix)
 {
     int n = matrix.size();
     int m = matrix[0].size();
@@ -92,7 +92,6 @@ void setZeroesConstSpace(vector<vector<int>> &matrix)
             matrix[0][i] = 0;
         }
     }
-}
 }
 
 void print(std::vector<std::vector<int>> &nums)
