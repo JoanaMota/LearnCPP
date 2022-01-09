@@ -27,6 +27,17 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
     }
     return NULL;
 }
+ListNode *getIntersectionNodeOnTimeO1Space(ListNode *headA, ListNode *headB)
+{
+    ListNode *headATemp = headA;
+    ListNode *headBTemp = headB;
+    while (headATemp != headBTemp)
+    {
+        headATemp = headATemp == NULL ? headB : headATemp->next;
+        headBTemp = headBTemp == NULL ? headA : headBTemp->next;
+    }
+    return headATemp;
+}
 
 void print(ListNode *node)
 {
