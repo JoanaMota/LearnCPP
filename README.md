@@ -184,6 +184,11 @@ A `struct` is more a bundle, it contains several related elements that need to b
 
 Contrary to a `struct`, a `class` is made to offer an interface, that has some degree of separation from its implementation. A `class` is not just there to store data. In fact a user of a class is not supposed to know what data the class is storing, or if it contains any data at all for that matter. All he cares about is its responsibilities, expressed via its interface.
 
+### Pass by value VS Pass by reference:
+**Pass by value** means that a copy of the actual parameter’s value is made in memory.
+
+**Pass by reference** means to pass the reference of an argument in the calling function to the corresponding formal parameter of the called function so that a copy of the address of the actual parameter is made in memory.
+
 ### Differences between references and pointers:
 
 1. Once a reference is created, it cannot be later made to reference another object; it cannot be reseated. This is often done with pointers.
@@ -297,6 +302,8 @@ void foo(int arg1, int arg2)
     //...
 }
 ```
+
+[Multithreading](https://github.com/JoanaMota/LearnCPP/wiki/Multithreading)
 
 ---
 
