@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <unordered_set>
 
 bool containsDuplicateOn2(std::vector<int> &nums)
 {
@@ -28,6 +29,18 @@ bool containsDuplicateO2n(std::vector<int> &nums)
     }
     return false;
 }
+bool containsDuplicateO2nSet(std::vector<int> &nums)
+{
+    std::unordered_set<int> equals;
+    for (int i = 0; i < nums.size(); ++i)
+    {
+        if (equals.count(nums[i]))
+            return true;
+
+        equals.insert(nums[i]);
+    }
+    return false;
+}
 
 void print(std::vector<int> &nums)
 {
@@ -42,6 +55,6 @@ int main()
 {
     std::vector<int> nums = {1, 2, 3, 4};
     print(nums);
-    std::cout << std::boolalpha << containsDuplicateO2n(nums) << std::endl;
+    std::cout << std::boolalpha << containsDuplicateO2nSet(nums) << std::endl;
     return 0;
 }
