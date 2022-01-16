@@ -303,7 +303,7 @@ void foo(int arg1, int arg2)
 }
 ```
 
-[Multithreading](https://github.com/JoanaMota/LearnCPP/wiki/Multithreading)
+### [Multithreading](https://github.com/JoanaMota/LearnCPP/wiki/Multithreading)
 
 ---
 
