@@ -223,6 +223,10 @@ str = (char *) malloc(15); //malloc()
 
 `delete` is used on resources allocated by new.
 
+
+### Void pointers
+A void pointer is a pointer which has no datatype associated with it. It can hold addresses of any type.
+
 ### Other Specifiers
 
 - Simple
@@ -271,6 +275,13 @@ int main()
 `itr++` operator is more expensive than the pre-increment `++itr` operator. The post-increment operator generates a copy of the element before proceeding with incrementing the element and returning the copy. Moreover, most compilers will automatically optimize `itr++` by converting it implicitly into `++itr`.
 
 ### [Shallow Copy and Deep Copy](https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c/)
+
+**Shallow** copy stores the references of objects to the original memory address.
+
+**Deep** copy makes a new and separate copy of an entire object with its unique memory address.
+
+Therefore, Shallow copy is comparatively faster than Deep copy.
+
 
 ### [The Diamond Problem](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions#the-diamond-problem)
 
