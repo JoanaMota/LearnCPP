@@ -228,7 +228,7 @@ str = (char *) malloc(15); //malloc()
 - Simple
 - `static`: means that no matter how many objects of the class are created, there is only one copy of the static member. The function is independent of any particular object of the class. Can be called even if no objects of the class exist. Can only access static data members, thus they don't have access to the `this` pointer, thus nor its related data members.
 - `const`: functions can never modify the object or its related data members. The const modifier for a static member function is meaningless, because there is no object associated with the call.
-- [`inline`](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions)
+- [`inline`](https://github.com/JoanaMota/LearnCPP/wiki/Virtual-Functions#inline-functions): for an inline function the compiler replaces the function call statement with the function code itself (process called expansion) and then compiles the entire code. Thus, with inline functions, the compiler does not have to jump to another location to execute the function, and then jump back since the code of the called function is already available to the calling program. This is normally done for small functions which are called multiple times and will have a lot of call statements.
 - `friend`: are made to give private access to non-class functions.
 - `mutable`: is mainly used to allow a particular data member of const object to be modified. `mutable` is particularly useful if most of the members should be constant but a few need to be updateable. You cannot use the mutable specifier with names declared as static or const, or reference.
 ```cpp
@@ -250,7 +250,7 @@ int main()
 - `volatile`: informs the compiler that a variable may change without the compiler knowing it. Variables that are declared as volatile will not be cached by the compiler, and will thus always be read from memory.
 - `explicit`: Specifies that a constructor or conversion function is explicit, that is, it cannot be used for implicit conversions and copy-initialization.
 ```cpp
-  struct B
+struct B
 {
     explicit B(int) { }
 };
