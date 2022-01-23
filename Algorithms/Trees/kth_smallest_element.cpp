@@ -1,5 +1,5 @@
 #include <iostream>
-#include <deque>
+#include <vector>
 
 struct TreeNode
 {
@@ -11,33 +11,22 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-void inorder(TreeNode *root, std::deque<int> &values)
+void inorder(TreeNode *root, std::vector<int> &numbers)
 {
     if (root == nullptr)
+    {
         return;
-
-    inorder(root->left, values);
-    int previous{root->val};
-    if (values.size() >= 1)
-    {
-        previous = values[values.size() - 1];
     }
-    if (previous >= root->val)
-    {
-        values.push_front(root->val);
-    }
-    else
-    {
-        values.push_back(root->val);
-    }
-
-    inorder(root->right, values);
+    inorder(root->left, numbers);
+    numbers.push_back(root->val);
+    inorder(root->right, numbers);
 }
+
 int kthSmallest(TreeNode *root, int k)
 {
-    std::deque<int> values;
-    inorder(root, values);
-    return values[k - 1];
+    std::vector<int> numbers;
+    inorder(root, numbers);
+    return numbers[k - 1];
 }
 
 int main()

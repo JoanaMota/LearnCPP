@@ -39,12 +39,9 @@ ListNode *mergeTwoLists(ListNode *l1, ListNode *l2)
         l1 = l1->next;
     }
     current = head;
-    // print(head);
 
     while (l2 != NULL && l1 != NULL)
     {
-        // print(head);
-        // print(l2);
         if (l1->val >= l2->val)
         {
             current->next = l2;
@@ -57,9 +54,11 @@ ListNode *mergeTwoLists(ListNode *l1, ListNode *l2)
         }
         current = current->next;
     }
-    if (l1)
+    // If one list ended but we still have values in the other
+    // we need to add in the end
+    if (l1 != NULL)
         current->next = l1;
-    if (l2)
+    if (l2 != NULL)
         current->next = l2;
     return head;
 }

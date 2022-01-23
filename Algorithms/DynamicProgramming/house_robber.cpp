@@ -3,14 +3,15 @@
 
 int rob(std::vector<int> &nums)
 {
-    int max1{0}, max2{0};
+    int rob1{0}, rob2{0};
     for (int i = 0; i < nums.size(); i++)
     {
-        int temp = std::max(max1, max2 + nums[i]);
-        max2 = max1;
-        max1 = temp;
+        // [rob1, rob2, i, i+1, i+2]
+        int temp = std::max(nums[i] + rob1, rob2);
+        rob1 = rob2;
+        rob2 = temp;
     }
-    return std::max(max1, max2);
+    return rob2;
 }
 
 int main()

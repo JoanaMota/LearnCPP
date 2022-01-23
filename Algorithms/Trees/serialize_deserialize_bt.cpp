@@ -99,58 +99,6 @@ public:
     }
 };
 
-class CodecRecursive
-{
-public:
-    void preorderSer(TreeNode *node, std::string &treeStr)
-    {
-        if (NULL == node)
-        {
-            treeStr.append("n ");
-            return;
-        }
-
-        treeStr.append(std::to_string(node->val) + " ");
-        preorderSer(node->left, treeStr);
-        preorderSer(node->right, treeStr);
-    }
-    // Encodes a tree to a single string.
-    std::string serialize(TreeNode *root)
-    {
-
-        std::string treeStr{""};
-        preorderSer(root, treeStr);
-        return treeStr;
-    }
-
-    TreeNode *preorder(std::string &data)
-    {
-        if (data.empty())
-        {
-            return NULL;
-        }
-        std::string numberStr = data.substr(0, data.find(" "));
-        data = data.substr(data.find(" ") + 1);
-        if ("n" == numberStr)
-        {
-            return NULL;
-        }
-        TreeNode *root = new TreeNode(std::stoi(numberStr));
-        root->left = preorder(data);
-        root->right = preorder(data);
-        return root;
-    }
-    // Decodes your encoded data to tree.
-    TreeNode *deserialize(std::string data)
-    {
-        if (0 == data.size())
-        {
-            return NULL;
-        }
-        return preorder(data);
-    }
-};
-
 void preorderPrint(TreeNode *node)
 {
     if (NULL == node)
@@ -171,6 +119,60 @@ void print(std::string data)
     std::cout << std::endl;
 }
 
+class Codec
+{
+public:
+    // Encodes a tree to a single string.
+    std::string serialize(TreeNode *root)
+    {
+        std::string treeS;
+        serializePreOrder(root, treeS);
+        return treeS;
+    }
+    // Decodes your encoded data to tree.
+    TreeNode *deserialize(std::string data)
+    {
+        if (0 == data.size())
+        {
+            return nullptr;
+        }
+        return deserializePreOrder(data);
+    }
+
+private:
+    void serializePreOrder(TreeNode *root, std::string &treeS)
+    {
+        if (root == nullptr)
+        {
+            treeS.append("n ");
+            return;
+        }
+        treeS.append(std::to_string(root->val) + " ");
+        serializePreOrder(root->left, treeS);
+        serializePreOrder(root->right, treeS);
+    }
+
+    TreeNode *deserializePreOrder(std::string &data)
+    {
+        if (data.empty())
+        {
+            return nullptr;
+        }
+
+        std::string numberStr = data.substr(0, data.find(" "));
+        data = data.substr(data.find(" ") + 1);
+        if ("n" == numberStr)
+        {
+            return nullptr;
+        }
+
+        TreeNode *node = new TreeNode(std::stoi(numberStr));
+        node->left = deserializePreOrder(data);
+        node->right = deserializePreOrder(data);
+        return node;
+    }
+};
+
 int main()
 {
     TreeNode *node = new TreeNode(1);
@@ -182,10 +184,11 @@ int main()
     preorderPrint(node);
     std::cout << std::endl;
 
-    CodecRecursive ser, deser;
-    print(ser.serialize(node));
-    std::cout << ser.serialize(node) << std::endl;
-    preorderPrint(deser.deserialize(ser.serialize(node)));
-    std::cout << std::endl;
+    Codec codec;
+    // print(ser.serialize(node));
+    std::string treeString = codec.serialize(node);
+    std::cout << treeString << std::endl;
+    preorderPrint(codec.deserialize(treeString));
+    // std::cout << std::endl;
     return 0;
 }
