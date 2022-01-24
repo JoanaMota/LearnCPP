@@ -2,27 +2,24 @@
 #include <vector>
 #include <chrono>
 
-void bubbleSort(std::vector<int> &a)
+void selectionSort(std::vector<int> &a)
 {
     int nrSwaps{0};
     for (int step = 0; step < (a.size() - 1); ++step)
     {
-        bool swapped{false};
-        for (int i = 0; i < (a.size() - step - 1); ++i)
+        int minIdx{step};
+        for (int i = minIdx + 1; i < a.size(); ++i)
         {
-            if (a[i] > a[i + 1])
+            if (a[minIdx] > a[i])
             {
-                std::swap(a[i], a[i + 1]);
-                nrSwaps++;
-                swapped = true;
+                minIdx = i;
             }
         }
-        // no swapping means the array is already sorted
-        // so no need of further comparison
-        if (!swapped)
+        if (minIdx != step)
         {
-            break;
+            std::swap(a[minIdx], a[step]);
         }
+        nrSwaps++;
     }
     std::cout << "Array is sorted in " << nrSwaps << " swaps" << std::endl;
 }
@@ -42,7 +39,7 @@ int main()
     print(a);
 
     auto begin = std::chrono::high_resolution_clock::now();
-    bubbleSort(a);
+    selectionSort(a);
     auto end = std::chrono::high_resolution_clock::now();
     auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
     std::cout << "Bubble Sort Time: " << elapsed.count() << " nanoseconds" << std::endl;

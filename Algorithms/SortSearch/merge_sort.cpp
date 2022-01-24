@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <chrono>
 
 // Print the array
 void printArray(std::vector<int> arr)
@@ -71,7 +72,6 @@ void mergeSort(std::vector<int> &arr, int left, int right)
         mergeSort(arr, left, m);
         mergeSort(arr, m + 1, right);
 
-        printArray(arr);
         // Merge the sorted subarrays
         merge(arr, left, m, right);
     }
@@ -80,10 +80,12 @@ void mergeSort(std::vector<int> &arr, int left, int right)
 // Driver program
 int main()
 {
-    std::vector<int> arr = {6, 5, 12, 10, 9, 1};
-    // int size = sizeof(arr) / sizeof(arr[0]);
-
+    std::vector<int> arr = {6, -11, 4, 1, -5, 20};
+    auto begin = std::chrono::high_resolution_clock::now();
     mergeSort(arr, 0, arr.size() - 1);
+    auto end = std::chrono::high_resolution_clock::now();
+    auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+    std::cout << "Bubble Sort Time: " << elapsed.count() << " nanoseconds" << std::endl;
 
     std::cout << "Sorted array: \n";
     printArray(arr);
