@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <unordered_set>
 
 std::vector<std::vector<int>> threeSum(std::vector<int> &nums)
 {
@@ -10,33 +11,33 @@ std::vector<std::vector<int>> threeSum(std::vector<int> &nums)
         return output;
     }
     std::sort(nums.begin(), nums.end());
-    for (int i = 0; i < nums.size() - 3; i++)
+    for (int i = 0; i < nums.size(); i++)
     {
-        if ((i + 1) == nums.size())
-        {
+        if (nums[i] > 0)
             break;
-        }
-
-        if ((i - 1) >= 0 && nums[i] == nums[i - 1])
-        {
+        if (i > 0 && nums[i] == nums[i - 1])
             continue;
-        }
 
-        for (int low = i + 1, high = nums.size() - 1; low < high;)
+        int leftIdx{i + 1}, rightIdx{(int)nums.size() - 1};
+        while (leftIdx < rightIdx)
         {
-
-            int sum = nums[i] + nums[low] + nums[high];
-            if (sum < 0)
-                low++;
-            else if (sum > 0)
-                high--;
+            int threeSum = nums[i] + nums[leftIdx] + nums[rightIdx];
+            if (threeSum == 0)
+            {
+                output.push_back({nums[i], nums[leftIdx], nums[rightIdx]});
+                leftIdx++;
+                while (nums[leftIdx] == nums[leftIdx - 1] && leftIdx < rightIdx)
+                {
+                    leftIdx++;
+                }
+            }
+            else if (threeSum > 0)
+            {
+                rightIdx--;
+            }
             else
             {
-                std::vector<int> temp = {nums[i], nums[low], nums[high]};
-                output.push_back(temp);
-                ++low;
-                while (low < high && nums[low - 1] == nums[low])
-                    ++low;
+                leftIdx++;
             }
         }
     }
@@ -57,6 +58,7 @@ void print(std::vector<std::vector<int>> &nums)
 
 int main()
 {
+    // std::vector<int> input = {0, 0, 0, 0};
     std::vector<int> input = {-1, 0, 1, 2, -1, -4};
     // std::vector<int> input = {0};
     std::vector<std::vector<int>> output = threeSum(input);
