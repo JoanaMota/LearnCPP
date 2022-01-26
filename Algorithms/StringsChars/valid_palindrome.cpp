@@ -5,49 +5,36 @@ bool isPalindrome(std::string s)
 {
     if (s.size() == 1)
         return true;
-
-    int backwards = s.size() - 1;
-    for (int i = 0; i < s.size(); i++)
+    int left{0}, right{(int)s.size() - 1};
+    while (left < right)
     {
-        if (backwards < 0 || backwards == i)
-            break;
-        while (backwards >= 0)
+        if (!isalnum(s[left]))
         {
-            if ((isalpha(s[backwards]) || isdigit(s[backwards])))
-                break;
-            backwards--;
-        }
-        if (isalpha(s[i]))
-        {
-            if (std::tolower(s[i]) != std::tolower(s[backwards]))
-            {
-                return false;
-                break;
-            }
-        }
-        else if (isdigit(s[i]))
-        {
-            if (s[i] != s[backwards])
-            {
-                return false;
-                break;
-            }
-        }
-        else
-        {
+            left++;
             continue;
         }
 
-        backwards--;
+        if (!isalnum(s[right]))
+        {
+            right--;
+            continue;
+        }
+
+        if (isalnum(s[left]) && isalnum(s[right]) && std::tolower(s[left]) != std::tolower(s[right]))
+        {
+            return false;
+        }
+        left++;
+        right--;
     }
     return true;
 }
 
 int main()
 {
-    // std::string input = "A man, a plan, a canal: Panama";
+    std::string input = "A man, a plan, a canal: Panama";
     // std::string input = ",,,,,,,,,,,,acva";
-    std::string input = "0";
+    // std::string input = "OP";
     std::cout << std::boolalpha << isPalindrome(input) << std::endl;
     return 0;
 }
