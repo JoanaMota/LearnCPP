@@ -67,6 +67,33 @@ int getHeightIterative(Node *root)
     return height;
 }
 
+void bfs(Node *head)
+{
+    std::queue<Node *> q;
+    q.push(head);
+    while (!q.empty())
+    {
+        int n = q.size();
+        while (n > 0)
+        {
+            Node *temp = q.front();
+            std::cout << temp->data << " ";
+            q.pop();
+            if (temp->left != NULL)
+            {
+                q.push(temp->left);
+            }
+            if (temp->right != NULL)
+            {
+                q.push(temp->right);
+            }
+            n--;
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+}
+
 int main()
 {
     Node *node = new Node(4);
@@ -74,6 +101,7 @@ int main()
     node->right = new Node(6);
     node->right->right = new Node(8);
     node->right->right->right = new Node(9);
+    bfs(node);
     std::cout << getHeight(node) << std::endl;
     std::cout << height(node) << std::endl;
     std::cout << getHeightIterative(node) << std::endl;
