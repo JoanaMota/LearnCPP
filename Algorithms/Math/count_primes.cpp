@@ -1,33 +1,35 @@
 #include <iostream>
+#include <vector>
 
 // Sieve of Eratosthenes - https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 int countPrimes(int n)
 {
-    if (n == 0 || n == 1)
-        return 0;
-    bool isPrime[n];
-    for (int i = 0; i < n; i++)
+    if (0 == n || 1 == n)
     {
-        if (i < 2)
-            isPrime[i] = false;
-        else
-            isPrime[i] = true;
+        return 0;
     }
+    std::vector<bool> primes(n, true);
+    primes[0] = false;
+    primes[1] = false;
 
     for (int i = 2; i * i < n; i++)
     {
-        if (!isPrime[i])
+        if (!primes[i])
+        {
             continue;
+        }
         for (int j = i * i; j < n; j += i)
         {
-            isPrime[j] = false;
+            primes[j] = false;
         }
     }
     int counter{0};
     for (int i = 0; i < n; i++)
     {
-        if (isPrime[i])
+        if (primes[i])
+        {
             counter++;
+        }
     }
     return counter;
 }

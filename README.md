@@ -282,6 +282,8 @@ int main()
 
 Therefore, Shallow copy is comparatively faster than Deep copy.
 
+[Checkout and example of a deep copy here](https://github.com/JoanaMota/LearnCPP/blob/main/Cpp11NewFeatures/deep_copy.cpp)
+
 
 ### [The Diamond Problem](https://github.com/JoanaMota/LearnCPP/wiki/Abstract-Classes-Pure-Virtual-Functions#the-diamond-problem)
 

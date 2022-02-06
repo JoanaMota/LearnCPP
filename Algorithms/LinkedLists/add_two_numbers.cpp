@@ -13,29 +13,26 @@ ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
     int temp{0}, pass{0}, l1v{l1->val}, l2v{l2->val};
     while (true)
     {
+        if (l1 == NULL && l2 == NULL && pass == 0)
+        {
+            break;
+        }
         l1v = 0;
         l2v = 0;
         if (l1 != NULL)
         {
             l1v = l1->val;
+            l1 = l1->next;
         }
         if (l2 != NULL)
         {
             l2v = l2->val;
-        }
-        if (l1 == NULL && l2 == NULL && pass == 0)
-        {
-            break;
+            l2 = l2->next;
         }
 
-        temp = l1v + l2v;
-        temp += pass;
-        pass = 0;
-        if (temp >= 10)
-        {
-            pass = temp / 10;
-            temp = temp % 10;
-        }
+        temp = l1v + l2v + pass;
+        pass = (int)(temp / 10);
+        temp = temp % 10;
         if (head == NULL)
         {
             head = new ListNode(temp);
@@ -45,14 +42,6 @@ ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
         {
             current->next = new ListNode(temp);
             current = current->next;
-        }
-        if (l1 != NULL)
-        {
-            l1 = l1->next;
-        }
-        if (l2 != NULL)
-        {
-            l2 = l2->next;
         }
     }
     return head;
