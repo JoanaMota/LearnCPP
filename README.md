@@ -316,6 +316,18 @@ void foo(int arg1, int arg2)
 }
 ```
 
+### What is wrong with this code
+
+**Infinite Loop**
+```cpp
+unsigned char half_limit = 150;
+for (unsigned char i = 0; i < 2 * half_limit; ++i)
+{
+    // do something;
+}
+```
+This code will result in an infinite loop. This because the expression 2 * half_limit will get promoted to an int (based on C++ conversion rules) and will have a value of 300. However, since i is an unsigned char, it is represented by an 8-bit value which, after reaching 255, will overflow (so it will go back to 0) and the loop will therefore go on forever.
+
 ### [Multithreading](https://github.com/JoanaMota/LearnCPP/wiki/Multithreading)
 
 ---
