@@ -330,6 +330,8 @@ This code will result in an infinite loop. This because the expression 2 * half_
 
 ### [Multithreading](https://github.com/JoanaMota/LearnCPP/wiki/Multithreading)
 
+### [C++ Memory Allocation/Deallocation for Data Processing](https://towardsdatascience.com/c-memory-allocation-deallocation-for-data-processing-1b204fb8a9c)
+
 ---
 
 :mortar_board: To improve my C++ knowledge I took the Udemy Course - Learn Advanced C++ Programming and here are some of the exercises implementations.

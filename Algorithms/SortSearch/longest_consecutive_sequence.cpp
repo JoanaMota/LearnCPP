@@ -43,7 +43,7 @@ int longestConsecutive(std::vector<int> &nums)
 
 int main()
 {
-    std::vector<int> nums = {100, 4, 200, 1, 3, 2};
+    std::vector<int> nums = {1, 2, 0, 1};
     std::cout << longestConsecutive(nums) << std::endl;
     return 0;
 }
