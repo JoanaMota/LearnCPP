@@ -1,6 +1,6 @@
 # My Journey Learning C++
 
-:star: This is a collection of all my notes and thoughts that I have been assembling while learning and trying to increase my knowledge in C++.
+:star: **This is a collection of all my notes and thoughts that I have been assembling while learning and trying to increase my knowledge in C++.**
 
 ### :mag: For more detailed information about C++ main topics checkout my full notes on the [Wiki](https://github.com/JoanaMota/LearnCPP/wiki) :wink:
 
